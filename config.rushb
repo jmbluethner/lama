@@ -1,9 +1,0 @@
-database: {
-  "SQLdbame": " ",
-  "SQLusername": " ",
-  "SQLaddress": " ",
-  "SQLpassword": " ",
-},
-ipblacklist: {
-  "blockedIPs": " "
-}
