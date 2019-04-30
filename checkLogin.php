@@ -10,10 +10,10 @@
       // This file checks if the login is valid, and rather the user is a 'user' or 'moderator'.
       // We use a SQL database to check the credentials.
 
-      $globalSettings = inlude('rushb.conf');
+      $globalSettings = include('rushb.conf');
 
-      $mail = $_GET['loginMail'];
-      $password = $_GET['loginPassw'];
+      $mail = $_POST['loginMail'];
+      $password = $_POST['loginPassw'];
 
       print_r($globalSettings('SQLdbname'));
       print_r('test');
