@@ -4,6 +4,7 @@
   </head>
 
   <body>
+    Vor PHP
     <?php
 
       // This file checks if the login is valid, and rather the user is a 'user' or 'moderator'.
@@ -20,5 +21,6 @@
       $sql = "SELECT mail FROM users WHERE mail='".$loginMail."'";
 
     ?>
+    Nach PHP
   </body>
 </html>
