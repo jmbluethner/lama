@@ -1,6 +1,6 @@
 <form method="GET" action="checkLogin.php">
-  <input type="text" placeholder="mail"/>
-  <input type="password" placeholder="password"/>
+  <input name="loginMail" type="text" placeholder="mail"/>
+  <input name="loginPass" type="password" placeholder="password"/>
   <button type="submit">Sign Up</button>
 </form>
 

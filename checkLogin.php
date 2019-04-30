@@ -1,13 +1,24 @@
-<?php
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
 
-  // This file checks if the login is valid, and rather the user is a 'user' or 'moderator'.
-  // We use a SQL database to check the credentials.
+  <body>
+    <?php
 
-  $globalSettings = inlude('rushb.conf');
+      // This file checks if the login is valid, and rather the user is a 'user' or 'moderator'.
+      // We use a SQL database to check the credentials.
 
-  $mail = $_GET['loginMail'];
-  $password = $_GET['loginPassword'];
+      $globalSettings = inlude('rushb.conf');
 
-  $sql = "SELECT mail FROM users WHERE mail='".$loginMail."'";
+      $mail = $_GET['loginMail'];
+      $password = $_GET['loginPassw'];
 
-?>
+      print_r($globalSettings('SQLdbname'));
+      print_r('test');
+
+      $sql = "SELECT mail FROM users WHERE mail='".$loginMail."'";
+
+    ?>
+  </body>
+</html>
