@@ -10,7 +10,11 @@
         </head>
         <body>
             <section class="mainframe">
+                <div class="serverindex">
+                    <div class="serverbar">
 
+                    </div>
+                </div>
             </section>
             <script src=""></script>
         <body>
