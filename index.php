@@ -3,15 +3,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <?php include "./web-elements/php/head.php" ?>
-    <?php
-      if($_SESSION['loginstate']=='user' || $_SESSION['loginstate']=='admin') {
-        header("Location: interface.php");
-        die();
-      } else {
-        header("Location: login.php");
-      }
+    <?php 
+      // Check if user has valid Session
+      include "./web-elements/php/head.php";
+      include "checkSession.php";
+      checkSession();
     ?>
+    <!-- If the PHP hasn't micked in, in order to redirect the user to the login page, we redirect him to the content. -->
+    <meta http-equiv='refresh' content='0; URL=interface.php'>
   </head>
   <body>
     Checking Login-State ...
