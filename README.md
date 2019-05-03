@@ -4,7 +4,7 @@
 ![Badge_License](https://img.shields.io/github/license/nighttimedev/rushb.svg)
 ![Badege_Size](https://img.shields.io/github/repo-size/nighttimedev/rushb.svg)
 ![Badge_LastCommit](https://img.shields.io/github/last-commit/nighttimedev/rushb.svg)
-![Badge_Commitrate](https://img.shields.io/github/commit-activity/w/nighttimedev/rushb.svg?label=average%20commits)  
+![Badge_Commitrate](https://img.shields.io/github/commit-activity/w/nighttimedev/rushb.svg)  
 ![Badge_Stars](https://img.shields.io/github/stars/nighttimedev/rushb.svg?style=social)
 
 
