@@ -1,4 +1,4 @@
-<span style="color: blue"># RushB</span>
+# RushB
 A PHP based CSGO-Server management Interface for LAN Tournaments.  
 I've developed this to manage our CS:GO torunament @ DIE-LAN 2019. You can vsit us at https://die-lan.party  
 The whole Code is filled with comments from my side, so everyone can understand what was going on in my head. I think this makes my project suitable for education / learning processes.  
@@ -18,3 +18,5 @@ In order to set-up the RushB interface, you need:
 - A valid PHP installation (I tested on 7.3)  
 - A SQL Database  
 - The RushB-SP Plugin installed on your CS:GO Server
+
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
