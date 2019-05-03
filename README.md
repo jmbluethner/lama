@@ -1,7 +1,7 @@
 # RushB
 *A PHP based CSGO-Server management Interface for LAN Tournaments.*
 
-(https://img.shields.io/github/license/nighttimedev/rushb.svg)
+![Badge](https://img.shields.io/github/license/nighttimedev/rushb.svg)
 
 I've developed this to manage our CS:GO torunament @ DIE-LAN 2019. You can vsit us at https://die-lan.party  
 The whole Code is filled with comments from my side, so everyone can understand what was going on in my head. I think this makes my project suitable for education / learning processes.  
