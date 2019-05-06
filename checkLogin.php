@@ -4,7 +4,6 @@
   </head>
 
   <body>
-    Vor PHP
     <?php
 
       // This file checks if the login is valid, and rather the user is a 'user' or 'moderator'.
@@ -13,12 +12,10 @@
       $globalSettings = include('rushb_config.php');
 
       $mail = $_POST['loginMail'];
-      $password = $_POST['loginPassw'];
+      $password = $_POST['loginPass'];
 
       print_r($globalSettings('SQLdbname'));
-      print_r('test');
-
-      $sql = "SELECT mail FROM users WHERE mail='".$loginMail."'";
+      print_r($mail." : ".$password);
 
     ?>
     Nach PHP
