@@ -1,4 +1,4 @@
-<form method="GET" action="checkLogin.php">
+<form method="POST" action="checkLogin.php">
   <input name="loginMail" type="text" placeholder="mail"/>
   <input name="loginPass" type="password" placeholder="password"/>
   <button type="submit">Sign Up</button>
