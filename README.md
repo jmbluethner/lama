@@ -34,7 +34,7 @@ In order to set-up the RushB interface, you need:
   
 ## Bugs, Issues, ...
 If you get any errors, which are definitely not caused by yourself, I'd love to get your error report.  
-Write me an E-Mail to: git@nighttimedev.com, with 'rushb' as Subject.
+Write me an E-Mail to: git@nighttimedev.com, with 'Error: git/rushb' as Subject.
 <br>
 <br>
 <br>  
