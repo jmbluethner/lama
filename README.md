@@ -28,5 +28,3 @@ In order to set-up the RushB interface, you need:
 - A valid PHP installation (I tested on 7.3)  
 - A SQL Database  
 - The RushB-SP Plugin installed on your CS:GO Server
-
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
