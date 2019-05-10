@@ -32,9 +32,19 @@ In order to set-up the RushB interface, you need:
 - A SQL Database  
 - The RushB-SP Plugin installed on your CS:GO Server  
 ## Install
+- Go to your Webservers Filepath (Apache default /var/www/html)  
 ```sh
 cd /var/www/html
 git clone https://github.com/nighttimedev/rushb
+```  
+- If you need to install PHP  
+```sh
+sudo apt-update && apt-upgrade 
+sudo apt install php7.3 php7.3-cli php7.3-common
+```
+- To check your PHP Installation
+```sh
+php -v
 ```
   
 ## Bugs, Issues, ...
