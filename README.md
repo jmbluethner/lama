@@ -34,4 +34,5 @@ If you get any errors, which are definitely not caused by yourself, I'd love to 
 Write me an E-Mail to: git@nighttimedev.com, with 'rushb' as Subject.
   
 ![](https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png | width=100)  
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250)
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png =250x250)  
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
