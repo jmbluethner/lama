@@ -3,6 +3,7 @@
 
 # RushB  
 *A PHP based CSGO-Server management Interface for LAN Tournaments.*  
+
 *!!! This project is NOT working currently! Everything is WIP !!!*  
 
 ![Badge_License](https://img.shields.io/github/license/nighttimedev/rushb.svg)
