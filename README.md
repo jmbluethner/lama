@@ -1,6 +1,6 @@
 # RushB  
 <img src="https://development.lintra.nighttimedev.com/assets/media/img/ntd_black.svg" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="25" />  
-*A PHP based CSGO-Server management Interface for LAN Tournaments.*
+A PHP based CSGO-Server management Interface for LAN Tournaments.  
 
 ![Badge_License](https://img.shields.io/github/license/nighttimedev/rushb.svg)
 ![Badege_Size](https://img.shields.io/github/repo-size/nighttimedev/rushb.svg)
