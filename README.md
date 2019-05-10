@@ -37,6 +37,10 @@ In order to set-up the RushB interface, you need:
 cd /var/www/html
 git clone https://github.com/nighttimedev/rushb
 ```  
+- If you need to install apache2  
+```sh
+sudo apt-get install apache2
+```
 - If you need to install PHP  
 ```sh
 sudo apt-update && apt-upgrade 
