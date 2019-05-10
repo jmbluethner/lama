@@ -30,5 +30,5 @@ In order to set-up the RushB interface, you need:
 - The RushB-SP Plugin installed on your CS:GO Server  
   
   
-If you have any errors, which are defenetly not caused by yourself, I'd love to get your error report.  
+If you have any errors, which are definitely not caused by yourself, I'd love to get your error report.  
 Write me an E-Mail to: git@nighttimedev.com, with 'rushb' as Subject.
