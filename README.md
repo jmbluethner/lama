@@ -32,3 +32,5 @@ In order to set-up the RushB interface, you need:
 ## Bugs, Issues, ...
 If you get any errors, which are definitely not caused by yourself, I'd love to get your error report.  
 Write me an E-Mail to: git@nighttimedev.com, with 'rushb' as Subject.
+  
+![flag_german](https://cdn3.iconfinder.com/data/icons/world-flags-square-vol-2/48/Germany-512.png)
