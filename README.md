@@ -33,7 +33,7 @@ In order to set-up the RushB interface, you need:
 If you get any errors, which are definitely not caused by yourself, I'd love to get your error report.  
 Write me an E-Mail to: git@nighttimedev.com, with 'rushb' as Subject.
   
-  
-  
-  
+<br>
+<br>
+<br>
 Developed with :heart: from <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="20" height="16" />
