@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="./assets/css/login.css"/>
   </head>
   <body>
-    <form method="POST" action="checkLogin.php">
-      <input name="loginMail" type="text" placeholder="mail"/>
-      <input name="loginPass" type="password" placeholder="password"/>
-      <button type="submit">Sign Up</button>
-    </form>
+    <section>
+      <form method="POST" action="checkLogin.php">
+        <input class="textinput" name="loginMail" type="text" placeholder="mail"/><br>
+        <input class="textinput" name="loginPass" type="password" placeholder="password"/><br>
+        <button class="submit" type="submit">Sign Up</button>
+      </form>
+    </section>
   </body>
 </html>
 

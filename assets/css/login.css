@@ -2,9 +2,27 @@ body,html {
   padding: 0;
   margin: 0;
 }
-body {
+section {
   background-image: url('../img/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.submit {
+  border: 2px solid white;
+  height: 30px;
+  width: 85px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+.textinput {
+  border: 1px solid transparent;
+  color: white;
+  background: none;
+  font-size: 20px;
+  width: 120px;
+  height: 25px;
+  font-family: 'Arial', sans-serif;
 }
