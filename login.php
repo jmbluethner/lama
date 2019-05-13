@@ -1,8 +1,20 @@
-<form method="POST" action="checkLogin.php">
-  <input name="loginMail" type="text" placeholder="mail"/>
-  <input name="loginPass" type="password" placeholder="password"/>
-  <button type="submit">Sign Up</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>RushB - PHP Server Interface</title>
+    <link rel="stylesheet" href="./assets/css/login.css"/>
+  </head>
+  <body>
+    <section>
+      <form method="POST" action="checkLogin.php">
+        <input class="textinput" name="loginMail" type="text" placeholder="mail"/><br>
+        <input class="textinput" name="loginPass" type="password" placeholder="password"/><br>
+        <button class="submit" type="submit">Sign Up</button>
+      </form>
+    </section>
+  </body>
+</html>
 
 <?php
 

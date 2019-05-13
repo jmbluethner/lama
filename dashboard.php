@@ -6,7 +6,7 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <?php include "./web-elements/php/header.php" ?>
+            <?php include "./web-elements/php/head.php" ?>
         </head>
         <body>
             <section class="mainframe">
