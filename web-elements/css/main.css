@@ -108,3 +108,23 @@ nav h1 {
   border-radius: 15px;
   background-color: rgba(0,0,0,0.75);
 }
+
+.controlbuttons {
+  width: 100%;
+  display: block;
+  background-color: white;
+  height: 60px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.controlbuttons_inner {
+  display: inline-block;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  margin-top: 20px;
+}
+
+.controlbutton {
+  float: left;
+}

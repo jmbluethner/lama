@@ -41,6 +41,12 @@
         </div>
       </div>
     </div>
+    <div class="controlbuttons">
+      <div class="controlbuttons_inner">
+        <button class="controllbutton">Server anlegen</button>
+        <button class="controllbutton">Bestehenden hinzufügen</button>
+      </div>
+    </div>
   </section>
   <script src=""></script>
 </body>
