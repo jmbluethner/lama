@@ -18,6 +18,5 @@
       print_r($mail." : ".$password);
 
     ?>
-    Nach PHP
   </body>
 </html>

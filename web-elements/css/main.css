@@ -11,20 +11,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.serverbar {
-    width: 100%;
-    display: block;
-    height: 30px;
-    background-color: rgb(150,150,150);
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid rgb(40,40,40);
-    margin-top: 15px;
-    overflow: hidden;
+.servertile {
+
 }
 .serverindex {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: row;
     padding-left: 30px;
     padding-right: 30px;
 }

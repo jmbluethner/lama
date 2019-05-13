@@ -11,7 +11,7 @@
         <body>
             <section class="mainframe">
                 <div class="serverindex">
-                    <div class="serverbar">
+                    <div class="servertile">
 
                     </div>
                 </div>
