@@ -20,7 +20,7 @@
 <link rel="shortcut icon" href="/assets/media/img/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
 <link rel="stylesheet" href="../../assets/css/main.css" type="text/css">
-<meta name="theme-color" content="#ffa500">
+<meta name="theme-color" content="#009aff">
 
 <!-- Fontawesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
