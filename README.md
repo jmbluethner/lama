@@ -8,12 +8,12 @@
 !!! This project is NOT working currently! Everything is WIP !!!  
 
 ![Badge_License](https://img.shields.io/github/license/nighttimedev/lama.svg)
-![Badege_Size](https://img.shields.io/github/repo-size/nighttimedev/rushb.svg)
-![Badge_Language](https://img.shields.io/github/languages/top/nighttimedev/rushb.svg)
-![Badge_LastCommit](https://img.shields.io/github/last-commit/nighttimedev/rushb.svg)  
-![Badge_ClosedIssues](https://img.shields.io/github/issues-closed/nighttimedev/rushb.svg)
-![Badge_OpenIssues](https://img.shields.io/github/issues/nighttimedev/rushb.svg)  
-![Badge_Stars](https://img.shields.io/github/stars/nighttimedev/rushb.svg?style=social)
+![Badege_Size](https://img.shields.io/github/repo-size/nighttimedev/lama.svg)
+![Badge_Language](https://img.shields.io/github/languages/top/nighttimedev/lama.svg)
+![Badge_LastCommit](https://img.shields.io/github/last-commit/nighttimedev/lama.svg)  
+![Badge_ClosedIssues](https://img.shields.io/github/issues-closed/nighttimedev/lama.svg)
+![Badge_OpenIssues](https://img.shields.io/github/issues/nighttimedev/lama.svg)  
+![Badge_Stars](https://img.shields.io/github/stars/nighttimedev/lama.svg?style=social)
 
 
 I've developed this to manage our CS:GO torunament @ DIE-LAN 2019. You can vsit us at https://die-lan.party  
