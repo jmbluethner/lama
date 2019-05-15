@@ -22,22 +22,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="shortcut icon" href="/assets/media/img/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
-    <link rel="stylesheet" href="../../assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css" type="text/css">
     <meta name="theme-color" content="#3b3b3b">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
+
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body>
-    <?php
-      if($_SESSION['login']!=true) {
-        header("Location: ./login.php");
-        die();
-      } else {
-        header("Locaion: ./dashboard.php");
-        die();
-      }
-    ?>
-    Checking Login-State ...
+    <section>
+      <div class="topbar_container">
+        <div class="topbar_wrapper">
+            <div class="topbar_logo">
+              <button class="button_hidden">
+                <h1>LA.MA</h1>
+              </button>
+            </div>
+          <div class="topbar_right">
+            <div class="topbar_username">Sample Username</div>
+            <button class="topbar_back" title="One step back" onclick="goBack()">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="lower_container">
+        <div class="sidebar_container">
+          <!-- <button class="sidebar_plugin">Home</button> -->
+          <?php
+            
+          ?>
+        </div>
+        <iframe>
+
+        </iframe>
+      </div>
+    </section>
+    <script src="./assets/js/functions.js"></script>
+    <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
   </body>
 </html>
