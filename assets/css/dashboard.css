@@ -8,6 +8,7 @@
   --message: #00B2FF;
   --warning: rgb(250, 165, 0);
   --text: #000000;
+  --text-light: #5E5E5E;
   --textSecondary: #ffffff;
   --panes: #ffffff;
 }
@@ -18,8 +19,12 @@ html,body {
 iframe {
   border: none;
   height: 100%;
+  min-height: 100%;
   flex-grow: 100;
   background-color: var(--primary);
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: scroll;
 }
 button {
   background: none;
@@ -150,4 +155,106 @@ section {
 .sidebar_plugin:hover {
   border-left: 5px solid var(--accent);
   padding-left: 27px;
+  background-color: var(--active);
+}
+.sidebar_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_plugincontainer {
+  flex-grow: 100;
+}
+.sidebar_logout {
+  width: 100%;
+  height: 50px;
+  background-color: var(--active);
+  color: var(--textSecondary);
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  margin-top: 10px;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  font-size: 27px;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-light);
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+}
+.pane {
+  background-color: var(--panes);
+  width: 100%;
+  margin-top: 30px;
+  min-height: 50px;
+  display: block;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+.contenttext {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  color: var(--text-light);
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+.pane_collapse {
+  position: absolute;
+  top: 34px;
+  right: 30px;
+  background: none;
+}
+.pane_collapse i {
+  color: var(--text);
+  font-size: 25px;
+  transform: rotate(180deg);
+}
+.alertcontainer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: block;
+}
+.table_condensed {
+  width: 100%;
+  margin-top: 45px;
+}
+.table_condensed tr th {
+  width: 20%;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+[id^="pane_"] {
+  height: auto;
 }

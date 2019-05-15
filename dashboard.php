@@ -49,16 +49,33 @@
       </div>
       <div class="lower_container">
         <div class="sidebar_container">
-          <!-- <button class="sidebar_plugin">Home</button> -->
-          <?php
-            
-          ?>
+          <div class="sidebar_wrapper">
+            <div class="sidebar_plugincontainer">
+              <?php
+                $plugins = scandir('./plugins/');
+                $plugins = array_diff($plugins, array('.', '..'));
+                foreach ($plugins as $pluginSelected) {
+                  if(!is_dir($pluginSelected)) {
+                    if (strpos($pluginSelected, '.php') !== false) {
+                      $pluginOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected);
+                      $pluginSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected));
+                      print_r("<button onclick='switchView(this)' class='sidebar_plugin' id='".$pluginOriginal."'>".$pluginSelected."</button>");
+                    }
+                  }
+                }
+              ?>
+            </div>
+            <form method="GET" action="signOut.php">
+              <button type="submit" class="sidebar_logout">
+                Logout
+              </button>
+            </form>
+          </div>
         </div>
-        <iframe>
-
-        </iframe>
+        <iframe id="contentframe" src=""></iframe>
       </div>
     </section>
+    <div class="alertcontainer"></div>
     <script src="./assets/js/functions.js"></script>
     <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
   </body>
