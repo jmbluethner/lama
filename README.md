@@ -7,7 +7,7 @@
 
 !!! This project is NOT working currently! Everything is WIP !!!  
 
-![Badge_License](https://img.shields.io/github/license/nighttimedev/rushb.svg)
+![Badge_License](https://img.shields.io/github/license/nighttimedev/lama.svg)
 ![Badege_Size](https://img.shields.io/github/repo-size/nighttimedev/rushb.svg)
 ![Badge_Language](https://img.shields.io/github/languages/top/nighttimedev/rushb.svg)
 ![Badge_LastCommit](https://img.shields.io/github/last-commit/nighttimedev/rushb.svg)  
