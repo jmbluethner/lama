@@ -413,3 +413,39 @@ h4 {
   color: var(--accent);
   cursor: pointer;
 }
+.table_massentry {
+  width: 100%;
+}
+.table_massentry tr td:first-of-type {
+  width: 20%;
+}
+.table_massentry tr td:last-of-type {
+  width: 80%;
+}
+.table_massentry tr td .username {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+}
+.chattext {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+select {
+  border: 1px solid var(--text-light);
+  color: var(--text-light);
+  height: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  margin-top: 10px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.wrapblock {
+  display: inline-block;
+  width: 100%;
+}

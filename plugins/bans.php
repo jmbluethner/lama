@@ -37,6 +37,44 @@
         </div>
       </div>
     </div>
+    <div class="pane" id="pane_allBans">
+      <h3>All Bans</h3>
+      <button class="pane_collapse" onclick="collapsePane('pane_allBans')">
+        <i class="fas fa-chevron-up" id="pane_allBans_chevron"></i>
+      </button>
+      <!-- <table class="table_massentry">
+        <tr>
+          <td><span class="username">Username123</span></td>
+          <td><span class="chattext">This Server is so freaking awesome!</span></td>
+        </tr>
+      </table> -->
+      <table class="twocol_table">
+        <tr>
+          <td>Username banned 2nd Username because of bug abuse<p class="timeChanged">10 Minutes ago</p></td>
+          <td><button class="button_simple">revert</button></td>
+        </tr>
+        <tr>
+          <td>Username banned 2nd Username because of bug abuse<p class="timeChanged">10 Minutes ago</p></td>
+          <td><button class="button_simple">revert</button></td>
+        </tr>
+        <tr>
+          <td>Username banned 2nd Username because of bug abuse<p class="timeChanged">10 Minutes ago</p></td>
+          <td><button class="button_simple">revert</button></td>
+        </tr>
+        <tr>
+          <td>Username banned 2nd Username because of bug abuse<p class="timeChanged">10 Minutes ago</p></td>
+          <td><button class="button_simple">revert</button></td>
+        </tr>
+        <tr>
+          <td>Username banned 2nd Username because of bug abuse<p class="timeChanged">10 Minutes ago</p></td>
+          <td><button class="button_simple">revert</button></td>
+        </tr>
+        <tr>
+          <td>Username banned 2nd Username because of bug abuse<p class="timeChanged">10 Minutes ago</p></td>
+          <td><button class="button_simple">revert</button></td>
+        </tr>
+      </table>
+    </div>
     <script src="../assets/js/functions.js"></script>
     <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
   </body>
