@@ -10,7 +10,7 @@
     <h1>Users</h1>
     <div class="pane" id="pane_manageUsers">
       <h3>Manage Bans</h3>
-      <button class="pane_collapse" onclick="collapsePane('pane_manageUSers')">
+      <button class="pane_collapse" onclick="collapsePane('pane_manageUsers')">
         <i class="fas fa-chevron-up" id="pane_manageUsers_chevron"></i>
       </button>
       <div style="height: 35px; width: 1px;"></div>
