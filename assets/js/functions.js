@@ -18,3 +18,5 @@ function collapsePane(pane) {
 function createAlert(type,heading,content) {
 
 }
+
+// change Root Styling: document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
