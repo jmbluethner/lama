@@ -78,6 +78,11 @@
       </div>
     </section>
     <div class="alertcontainer"></div>
+    <script>
+      if(document.getElementById('contentframe').src == "") {
+        document.getElementById('contentframe').src = "./plugins/home.php";
+      }
+    </script>
     <script src="./assets/js/functions.js"></script>
     <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
   </body>

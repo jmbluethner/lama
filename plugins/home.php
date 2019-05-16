@@ -22,7 +22,7 @@
           <th>Name</th>
           <th>Slots</th>
           <th>Mode</th>
-          <th>Maps</th>
+          <th>Map</th>
           <th>Status</th>
         </tr>
         <tr>
