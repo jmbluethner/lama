@@ -11,6 +11,8 @@
   --text-light: #5E5E5E;
   --textSecondary: #ffffff;
   --panes: #ffffff;
+  --table-light: #F2F2F2;
+  --table-dark: #EAEAEA;
 }
 html,body {
   padding: 0;
@@ -22,7 +24,8 @@ iframe {
   min-height: 100%;
   flex-grow: 100;
   background-color: var(--primary);
-  padding: 40px;
+  padding: 0;
+  padding-left: 40px;
   box-sizing: border-box;
   overflow: scroll;
 }
@@ -45,6 +48,12 @@ section {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+.framebody {
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .topbar_container {
   height: 110px;
@@ -243,18 +252,79 @@ h3 {
 .table_condensed {
   width: 100%;
   margin-top: 45px;
+  border-collapse: collapse;
+}
+.table_condensed tr {
+  height: 40px;
+}
+.table_condensed tr:nth-last-of-type(odd) {
+  background-color: var(--table-light);
+}
+.table_condensed tr:nth-last-of-type(even) {
+  background-color: var(--table-dark);
+}
+.table_condensed tr:first-of-type {
+  background: transparent;
+  height: 30px;
 }
 .table_condensed tr th {
   width: 20%;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
+  font-weight: 600;
   font-size: 16px;
   color: var(--text);
   margin: 0;
   border: 0;
   vertical-align: baseline;
 }
+.table_condensed tr td {
+  padding-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
 [id^="pane_"] {
   height: auto;
+}
+.twocol_table {
+  width: 100%;
+  margin-top: 45px;
+}
+.twocol_table tr td {
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--text);
+}
+.twocol_table tr td:last-of-type {
+  width: 115px;
+  text-align: center;
+}
+.twocol_table tr td .timeChanged {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  color: var(--secondary);
+  font-size: 12px;
+  margin-top: 2px;
+}
+.button_simple {
+  width: 112px;
+  height: 32px;
+  border: 1px solid var(--secondary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  color: var(--secondary);
+  font-size: 17px;
+  transition: .2s ease-in-out;
+}
+.button_simple:hover {
+  border-radius: 6px;
+  background-color: var(--secondary);
+  color: var(--textSecondary);
+}
+.button_simple:active {
+  background-color: transparent;
+  color: var(--secondary);
 }
