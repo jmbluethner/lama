@@ -169,6 +169,7 @@ section {
   border-left: 5px solid var(--accent);
   padding-left: 27px;
   background-color: var(--active);
+  cursor: pointer;
 }
 .sidebar_wrapper {
   width: 100%;
