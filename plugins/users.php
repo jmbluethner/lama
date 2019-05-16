@@ -20,6 +20,7 @@
       <div class="wrapblock">
         <input placeholder="Register Date" type="text" class="textinput half"></input>
         <select class="half">
+          <option></option>
           <option>Banned</option>
           <option>Unbanned</option>
         </select>

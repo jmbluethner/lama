@@ -14,6 +14,26 @@
   --table-light: #F2F2F2;
   --table-dark: #EAEAEA;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(50,50,50,0.75);
+  border-radius: 5px;
+  transition: .2s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.8);
+}
 html,body {
   padding: 0;
   margin: 0;
@@ -252,7 +272,8 @@ h4 {
 .pane_collapse i {
   color: var(--text);
   font-size: 25px;
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
+  transition-duration: .15s;
 }
 .alertcontainer {
   position: fixed;
@@ -448,4 +469,21 @@ select {
 .wrapblock {
   display: inline-block;
   width: 100%;
+}
+#loader {
+  position: absolute;
+  top: 5px;
+  height: 6px;
+  border-radius: 3px;
+  width: 10px;
+  animation-name: loader;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  background-color: var(--secondary);
+  transition: .1s ease;
+}
+@keyframes loader {
+  0%  {left: 0; opacity: 1;}
+  80% {left: 100%; opacity: 1;}
+  81% {opacity: 0;}
 }

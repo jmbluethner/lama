@@ -18,5 +18,11 @@ function collapsePane(pane) {
 function createAlert(type,heading,content) {
 
 }
+function showLoader() {
+  document.getElementById('loader').style.display = "block";
+}
+function hideLoader() {
+  document.getElementById('loader').style.display = "none";
+}
 
 // change Root Styling: document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');

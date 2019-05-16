@@ -31,6 +31,8 @@
      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body>
+    <script src="./assets/js/functions.js"></script>
+    <script>showLoader()</script>
     <section>
       <div class="topbar_container">
         <div class="topbar_wrapper">
@@ -42,6 +44,9 @@
               </a>
             </div>
           <div class="topbar_right">
+            <div id="loader">
+
+            </div>
             <div class="topbar_username">Sample Username</div>
             <button class="topbar_back" title="One step back" onclick="goBack()">
               <i class="fas fa-chevron-left"></i>
@@ -83,7 +88,7 @@
         document.getElementById('contentframe').src = "./plugins/home.php";
       }
     </script>
-    <script src="./assets/js/functions.js"></script>
     <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
+    <script>hideLoader()</script>
   </body>
 </html>
