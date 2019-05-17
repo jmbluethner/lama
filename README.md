@@ -2,7 +2,7 @@
 <img src="https://development.lintra.nighttimedev.com/assets/media/img/ntd_black.svg" data-canonical-src="https://development.lintra.nighttimedev.com/assets/media/img/ntd_black.svg" height="80" />  
 </p>
 
-# LA.MA<img src="https://i.imgur.com/g3xXGSP.png" data-canonical-src="https://i.imgur.com/g3xXGSP.png" height="40" />  
+# LA.MA<img src="https://i.imgur.com/g3xXGSP.png" data-canonical-src="https://i.imgur.com/g3xXGSP.png" height="35" />  
 
 *A PHP based CSGO-Server management Interface for LAN Tournaments.*  
 
