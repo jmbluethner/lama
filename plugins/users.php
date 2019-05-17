@@ -9,7 +9,7 @@
   <body class="framebody">
     <h1>Users</h1>
     <div class="pane" id="pane_manageUsers">
-      <h3>Manage Bans</h3>
+      <h3>Manage Users</h3>
       <button class="pane_collapse" onclick="collapsePane('pane_manageUsers')">
         <i class="fas fa-chevron-up" id="pane_manageUsers_chevron"></i>
       </button>
