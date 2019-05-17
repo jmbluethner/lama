@@ -32,7 +32,6 @@
   </head>
   <body>
     <script src="./assets/js/functions.js"></script>
-    <script>showLoader()</script>
     <section>
       <div class="topbar_container">
         <div class="topbar_wrapper">
@@ -51,6 +50,7 @@
               <div class="loader"></div>
               <div class="loader"></div>
             </div>
+            <script>showLoader()</script>
             <div class="topbar_username">Sample Username</div>
             <button class="topbar_back" title="One step back" onclick="goBack(); isFrameLoading();">
               <i class="fas fa-chevron-left"></i>

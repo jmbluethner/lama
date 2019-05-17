@@ -540,6 +540,7 @@ select {
 }
 #loader {
   width: 100%;
+  display: none;
 }
 .loader {
   background-color: var(--secondary);
