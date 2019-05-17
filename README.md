@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://development.lintra.nighttimedev.com/assets/media/img/ntd_black.svg" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" height="80" />  
+<img src="https://development.lintra.nighttimedev.com/assets/media/img/ntd_black.svg" data-canonical-src="https://development.lintra.nighttimedev.com/assets/media/img/ntd_black.svg" height="80" />  
 </p>
 
 # LA.MA
 <p align="center">
-<img src="https://imgur.com/g3xXGSP" data-canonical-src="https://imgur.com/g3xXGSP" height="20" />  
+<img src="https://i.imgur.com/g3xXGSP.png" data-canonical-src="https://i.imgur.com/g3xXGSP.png" height="20" />  
 </p>
 *A PHP based CSGO-Server management Interface for LAN Tournaments.*  
 
