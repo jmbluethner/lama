@@ -44,7 +44,13 @@
               </a>
             </div>
           <div class="topbar_right">
-            <div id="loader"></div>
+            <div id="loader">
+              <div class="loader"></div>
+              <div class="loader"></div>
+              <div class="loader"></div>
+              <div class="loader"></div>
+              <div class="loader"></div>
+            </div>
             <div class="topbar_username">Sample Username</div>
             <button class="topbar_back" title="One step back" onclick="goBack(); isFrameLoading();">
               <i class="fas fa-chevron-left"></i>
