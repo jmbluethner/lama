@@ -56,12 +56,16 @@ function spawnAlert(type,content) {
       validId = true;
     }
   }
-  div = document.createElement('div');
+  div = document.createElement('button');
   div.setAttribute('class','alertbox');
   div.setAttribute('id','boxnumb'+boxid);
+  div.setAttribute('onclick','removeAlert(this)');
   document.getElementById('alertcontainer').appendChild(div);
   document.getElementById('boxnumb'+boxid).innerHTML = content;
   document.getElementById('boxnumb'+boxid).style.backgroundColor = bc;
+}
+function removeAlert(id) {
+  id.parentNode.removeChild(id);
 }
 
 // change Root Styling: document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');

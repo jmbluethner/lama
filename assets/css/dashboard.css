@@ -280,7 +280,8 @@ h4 {
 
 .pane {
   background-color: var(--panes);
-  width: 100%;
+  width: 98%;
+  left: 1%;
   margin-top: 30px;
   min-height: 50px;
   display: block;
@@ -326,9 +327,10 @@ h4 {
   box-sizing: border-box;
   padding: 20px;
   padding-top: 0;
-  height: 80vh;
+  max-height: 80vh;
   overflow: auto;
   border: none;
+  margin-top: 110px;
 }
 .alertbox {
   margin-top: 10px;
@@ -340,8 +342,29 @@ h4 {
   box-sizing: border-box;
   color: var(--textSecondary);
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: normal;
+  animation-name: alertbox;
+  animation-duration: .2s;
+  overflow: hidden;
+  text-align: left;
+  transition: .1s ease;
+}
+@keyframes alertbox {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+.alertbox:hover {
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.alertbox h6 {
+  color: var(--textSecondary);
+  font-family: 'Consolas', sans-serif;
+  font-size: 13px;
+  font-weight: bolder;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
 }
 .table_condensed {
   width: 100%;

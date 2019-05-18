@@ -43,11 +43,9 @@
       <div class="topbar_container">
         <div class="topbar_wrapper">
             <div class="topbar_logo">
-              <a href="dashboard.php">
-                <button class="button_hidden">
-                  <h1>LA.MA</h1>
-                </button>
-              </a>
+              <button class="button_hidden">
+                <h1>LA.MA</h1>
+              </button>
             </div>
           <div class="topbar_right">
             <div id="loader">
