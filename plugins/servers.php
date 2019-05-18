@@ -18,9 +18,9 @@
       <div style="height: 35px; width: 1px;"></div>
       <h4>Add server</h4>
       <div class="flexwrap_line">
-        <input placeholder="Server Address" type="text" class="textinput"></input>
-        <input placeholder="Port" type="text" class="textinput"></input>
-        <input placeholder="Rcon Password" type="text" class="textinput"></input>
+        <input placeholder="Server Address" type="text" class="textinput split"></input>
+        <input placeholder="Port" type="text" class="textinput split"></input>
+        <input placeholder="Rcon Password" type="text" class="textinput split"></input>
       </div>
       <button class="buttonLarge">Add Server to Database</button>
     </div>

@@ -100,6 +100,7 @@ section {
   float: left;
   width: 275px;
   background-color: var(--secondary);
+  transition: .2s ease;
 }
 
 .lower_container {
@@ -120,6 +121,7 @@ section {
   width: 275px;
   height: 100%;
   background-color: var(--tertiary);
+  transition: .2s ease;
 }
 
 .topbar_logo h1 {
@@ -133,6 +135,7 @@ section {
   font-weight: 800;
   font-size: 35px;
   margin: 0;
+  transition: .2s ease;
 }
 
 .topbar_right {
@@ -427,6 +430,7 @@ h4 {
   flex-direction: line;
   box-sizing: border-box;
   max-width: 100%;
+  flex-wrap: wrap;
 }
 .flexwrap_line_wrap {
   display: flex;
@@ -458,8 +462,11 @@ h4 {
 
 .textinput {
   width: 100%;
+  flex-grow: 100;
 }
-
+.split {
+  width: auto;
+}
 .textinputDetails {
   float: left;
   flex-grow: 100;
@@ -646,4 +653,16 @@ select {
   height: 40px;
   width: 100%;
   border: 2px solid var(--secondary);
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar_container {
+    width: 150px;
+  }
+  .topbar_logo {
+    width: 150px;
+  }
+  .topbar_logo h1 {
+    padding-left: 5px;
+  }
 }
