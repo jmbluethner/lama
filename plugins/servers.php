@@ -36,24 +36,67 @@
       <div class="servertiles_wrapper flexwrap_line_wrap">
         <div class="servertile_border">
           <div class="servertile">
-
+            <div class="servertile_icon"><i class="fas fa-eye"></i></div>
+            <div class="servertile_text">
+              <span>6/10</span><br/>
+              <span>Players</span>
+            </div>
           </div>
         </div>
         <div class="servertile_border">
           <div class="servertile">
-
+            <div class="servertile_icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="servertile_text">
+              <span>Enabled</span><br/>
+              <span>VAC</span>
+            </div>
           </div>
         </div>
         <div class="servertile_border">
           <div class="servertile">
-
+            <div class="servertile_icon"><i class="far fa-map"></i></div>
+            <div class="servertile_text">
+              <span>de_mirage</span><br/>
+              <span>Map</span>
+            </div>
           </div>
         </div>
         <div class="servertile_border">
           <div class="servertile">
-
+            <div class="servertile_icon"><i class="far fa-flag"></i></div>
+            <div class="servertile_text">
+              <span>Defuse</span><br/>
+              <span>Gamemode</span>
+            </div>
           </div>
         </div>
+      </div>
+      <h4 style="margin-top: 35px;">Direct Gameserver Control</h4>
+      <div class="occupy">
+        <div class="flexwrap_line half manageline">
+          <div class="description">
+            Exec Config
+          </div>
+          <select class="select_line">
+            <option></option>
+            <option>server.cfg</option>
+            <option>matchmaking.cfg</option>
+            <option>kniferound.cfg</option>
+          </select>
+        </div>
+      </div>
+      <div class="occupy">
+        <div class="flexwrap_line half manageline">
+          <div class="description">
+            Change Map
+          </div>
+          <input type="text" class="textinput select_line" placeholder="eg. de_dust2"></input>
+        </div>
+      </div>
+      <br><br><br>
+      <h4 style="margin-top: 35px;">LAMA Gameserver Console</h4>
+      <div class="serverconsole">
+        <span>LGC :></span><form><input type="text"></input></form>
       </div>
       <button class="button_warning">Remove Server from Database</button>
     </div>
