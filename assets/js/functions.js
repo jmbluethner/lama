@@ -59,6 +59,7 @@ function spawnAlert(type,content) {
   div = document.createElement('button');
   div.setAttribute('class','alertbox');
   div.setAttribute('id','boxnumb'+boxid);
+  div.setAttribute('title','Click to remove');
   div.setAttribute('onclick','removeAlert(this)');
   document.getElementById('alertcontainer').appendChild(div);
   document.getElementById('boxnumb'+boxid).innerHTML = content;

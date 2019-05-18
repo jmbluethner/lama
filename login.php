@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
     <link rel="stylesheet" href="./assets/css/login.css" type="text/css">
     <meta name="theme-color" content="#3b3b3b">
+        <link rel="stylesheet" href="./assets/css/alert.css" type="text/css">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
@@ -93,6 +94,7 @@
         </form>
       </div>
     </div>
-    <script src="/assets/js/lightbox.js"></script>
+    <div class="alertcontainer" style="margin-top: 0 !important;" id="alertcontainer"></div>
+    <script src="./assets/js/functions.js"></script>
   </body>
 </html>

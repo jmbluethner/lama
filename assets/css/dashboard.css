@@ -317,55 +317,6 @@ h4 {
   transition-duration: .15s;
 }
 
-.alertcontainer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 400px;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-  padding-top: 0;
-  max-height: 80vh;
-  overflow: auto;
-  border: none;
-  margin-top: 110px;
-}
-.alertbox {
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid var(--secondary);
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  box-sizing: border-box;
-  color: var(--textSecondary);
-  font-family: 'Roboto', sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  animation-name: alertbox;
-  animation-duration: .2s;
-  overflow: hidden;
-  text-align: left;
-  transition: .1s ease;
-}
-@keyframes alertbox {
-  0%   {opacity: 0;}
-  100% {opacity: 1;}
-}
-.alertbox:hover {
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-}
-.alertbox h6 {
-  color: var(--textSecondary);
-  font-family: 'Consolas', sans-serif;
-  font-size: 13px;
-  font-weight: bolder;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 5px;
-}
 .table_condensed {
   width: 100%;
   margin-top: 45px;
