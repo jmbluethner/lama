@@ -449,8 +449,9 @@ h4 {
   font-weight: normal;
   font-size: 15px;
   margin-top: 10px;
-  padding-left: 15px;
+  padding-left: 10px;
   box-sizing: border-box;
+  background-color: transparent;
 }
 
 .textinput {
@@ -536,8 +537,9 @@ select {
   font-weight: normal;
   font-size: 15px;
   margin-top: 10px;
-  padding-left: 15px;
+  padding-left: 10px;
   box-sizing: border-box;
+  background-color: transparent;
 }
 
 .wrapblock {
