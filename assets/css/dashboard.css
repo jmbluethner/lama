@@ -159,6 +159,7 @@ section {
   border: 1px solid var(--secondary);
   top: 35px;
   transition: .2s ease;
+  color: var(--text);
 }
 
 .topbar_back:hover {
@@ -431,6 +432,7 @@ h4 {
   display: flex;
   flex-direction: line;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .flexblock_2col {
