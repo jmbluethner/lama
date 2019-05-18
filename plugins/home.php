@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <?php include '../assets/php/sessioncheck.php' ?>
     <meta charset="utf-8"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
     <link rel="stylesheet" href="../assets/css/dashboard.css"/>

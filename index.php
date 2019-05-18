@@ -30,11 +30,12 @@
   </head>
   <body>
     <?php
-      if($_SESSION['login']!=true) {
+      session_start();
+      if($_SESSION['login'] != 'user') {
         header("Location: ./login.php");
         die();
       } else {
-        header("Locaion: ./dashboard.php");
+        header("Location: ./dashboard.php");
         die();
       }
     ?>

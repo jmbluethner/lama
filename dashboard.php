@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <?php
+      session_start();
+      if($_SESSION['login'] != 'user') {
+        header('Location: login.php');
+        die();
+      }
+    ?>
     <title>LAMA Server Manager</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
