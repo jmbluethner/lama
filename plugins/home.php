@@ -75,6 +75,5 @@
       </table>
     </div>
     <script src="../assets/js/functions.js"></script>
-    <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
   </body>
 </html>

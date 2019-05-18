@@ -93,13 +93,12 @@
         <iframe id="contentframe" src=""></iframe>
       </div>
     </section>
-    <div class="alertcontainer"></div>
+    <div class="alertcontainer" id="alertcontainer"></div>
     <script>
       if(document.getElementById('contentframe').src == "") {
         document.getElementById('contentframe').src = "./plugins/home.php";
       }
     </script>
-    <script src="https://cdn.nighttimedev.com/toolbox/js/generalFunctions.js"></script>
     <script>hideLoader()</script>
   </body>
 </html>
