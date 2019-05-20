@@ -2,6 +2,8 @@
 <html>
   <head>
     <?php
+      ini_set('display_errors', 1); 
+
       session_start();
       if($_SESSION['login'] != 'user') {
         header('Location: login.php');
@@ -10,6 +12,7 @@
       if(!isset($_GET['viewframe'])) {
         $_GET['viewframe'] = 'home';
       }
+
     ?>
     <title>LAMA Server Manager</title>
     <meta charset="utf-8">
@@ -60,7 +63,7 @@
               <div class="loader"></div>
             </div>
             <script>showLoader()</script>
-            <div class="topbar_username">Sample Username</div>
+            <div class="topbar_username"><?php print_r($_SESSION['username']); ?></div>
             <button class="topbar_back" title="One step back" onclick="goBack(); isFrameLoading();">
               <i class="fas fa-chevron-left"></i>
             </button>

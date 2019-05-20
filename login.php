@@ -71,12 +71,16 @@
     <script src="./assets/js/functions.js"></script>
     <?php
 
+      session_start();
+
       include "./assets/php/functions.php";
-      if($_GET['attempted'] == "y") {
-        print_r("<script>spawnAlert('error','Invalid login Data');</script>");
-      }
-      if(!checkSQL()) {
-        print_r("<script>spawnAlert('error','SQL not connected!'); console.log('SQL Connection lost');</script>");
+      if(isset($_SESSION['attempted'])) {
+        if($_SESSION['attempted'] == "y") {
+          print_r("<script>spawnAlert('error','Invalid login Data');</script>");
+        }
+        if(!checkSQL()) {
+          print_r("<script>spawnAlert('error','SQL not connected!'); console.log('SQL Connection lost');</script>");
+        }
       }
     ?>
   </body>

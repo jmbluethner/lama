@@ -1,5 +1,5 @@
 <?php
-  ini_set('display_errors', 1);
+  ini_set('display_errors', 0);
   $config = include('config.php');
   $SQLhost = $config['SQLhost'];
   $SQLdbname = $config['SQLdbname'];
@@ -21,20 +21,22 @@
 
   if ($result->num_rows == 0) {
     // Mail not found in db
-    $_GET['attempted'] = "y";
+    $_SESSION['attempted'] = "y";
     header("Location: login.php");
     die();
   } else {
-    $_GET['attempted'] = "n";
+    $_SESSION['attempted'] = "n";
     $sql = "SELECT password FROM users WHERE mail='$mail'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       if(strtolower($row["password"]) == hash('sha512',$password)) {
         $_SESSION['login'] = 'user';
+        $_SESSION['usermail'] = $mail;
+        $_SESSION['username'] = $row["username"];
         header("Location: dashboard.php");
         die();
       } else {
-        $_GET['attempted'] = "y";
+        $_SESSION['attempted'] = "y";
         header("Location: login.php");
         die();
       }
