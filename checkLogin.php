@@ -26,13 +26,13 @@
     die();
   } else {
     $_SESSION['attempted'] = "n";
-    $sql = "SELECT password FROM users WHERE mail='$mail'";
+    $sql = "SELECT * FROM users WHERE mail='$mail'";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()) {
       if(strtolower($row["password"]) == hash('sha512',$password)) {
         $_SESSION['login'] = 'user';
         $_SESSION['usermail'] = $mail;
-        $_SESSION['username'] = $row["username"];
+        $_SESSION['username'] = $row['username'];
         header("Location: dashboard.php");
         die();
       } else {

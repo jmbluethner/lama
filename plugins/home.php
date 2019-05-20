@@ -10,7 +10,7 @@
   <body class="framebody">
     <h1>Home</h1>
     <div class="pane">
-      <h2>Welcome Username!</h2>
+      <h2>Welcome <?php print_r($_SESSION['username']) ?></h2>
       <p class="contenttext">There are currently 4 Servers with a total of 13 Players</p>
     </div>
     <div class="pane" id="pane_servers">
