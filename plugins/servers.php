@@ -17,12 +17,14 @@
       </button>
       <div style="height: 35px; width: 1px;"></div>
       <h4>Add server</h4>
-      <div class="flexwrap_line">
-        <input placeholder="Server Address" type="text" class="textinput split"></input>
-        <input placeholder="Port" type="text" class="textinput split"></input>
-        <input placeholder="Rcon Password" type="text" class="textinput split"></input>
-      </div>
-      <button class="buttonLarge">Add Server to Database</button>
+      <form method="get" action="servers.php">
+        <div class="flexwrap_line">
+          <input name="Sip" placeholder="Server Address" type="text" class="textinput split"></input>
+          <input name="Sport" placeholder="Port" type="text" class="textinput split"></input>
+          <input name="Srcon" placeholder="Rcon Password" type="text" class="textinput split"></input>
+        </div>
+        <button type="submit" name="addServer" class="buttonLarge">Add Server to Database</button>
+      </form>
     </div>
 
     <div class="pane" id="pane_ServerDetail_1">
@@ -104,5 +106,10 @@
     </div>
 
     <script src="../assets/js/functions.js"></script>
+    <?php
+      if(isset($_GET['addServer'])) {
+        // Check if IP is pingable, than add to Database
+      }
+    ?>
   </body>
 </html>
