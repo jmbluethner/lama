@@ -18,9 +18,6 @@ function collapsePane(pane) {
     document.getElementById(pane+"_chevron").style.transform = "rotate(0deg)";
   }
 }
-function createAlert(type,heading,content) {
-
-}
 function showLoader() {
   document.getElementById('loader').style.display = "block";
 }

@@ -98,7 +98,7 @@
     <div class="alertcontainer" id="alertcontainer"></div>
     <?php
       // Changing the viewframe to the specified URL
-      print_r("<script>switchViewID(".$_GET['viewframe'].")</script>")
+      print_r("<script>switchViewID('".$_GET['viewframe']."')</script>")
     ?>
     <script>
       if(document.getElementById('contentframe').src == "") {

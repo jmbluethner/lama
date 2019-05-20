@@ -38,43 +38,16 @@
 
         <!-- LOGIN -->
 
-        <form action="/assets/php/required/checkLogin.php" class="login__form" method="post">
+        <form action="./checkLogin.php" class="login__form" method="post">
           <input type="email" placeholder="E-Mail" name="loginMail" />
           <input type="password" placeholder="Passwort" name="loginPassword" />
           <button type="submit" name="requestLogin">Login</button>
         </form>
-
-        <span class="login__hinttext">
-          <a onclick="toggleLightbox('createAccount')">Noch kein Account? Dann leg dir einen an!</a>
-        </span>
         <span class="login__hinttext">
           <a onclick="toggleLightbox('forgotPassword')">Passwort vergessen?</a>
         </span>
       </div>
     </section>
-
-    <!-- Register -->
-
-    <div class="lightbox__container" id="createAccount">
-      <div class="lightbox__box">
-        <div class="lightbox__topbar">
-          <span class="lightbox__topbar_title">
-            Account erstellen
-          </span>
-          <span class="lightbox__topbar_close">
-            <button onclick="toggleLightbox('createAccount')">X</button>
-          </span>
-        </div>
-        <form class="lightbox__form" method="post" action="./assets/php/required/createAccount.php">
-          <input name="registerFirstName" type="text" placeholder="Vorname" class="lightbox__input__text"/>
-          <input name="registerSurname" type="text" placeholder="Nachname" class="lightbox__input__text"/>
-          <input name="registerMail" type="email" placeholder="E-Mail" class="lightbox__input__text"/>
-          <input name="registerPass" type="password" placeholder="Passwort" class="lightbox__input__text"/>
-          <input name="registerPassRepeat" type="password" placeholder="Passwort wiederholen" class="lightbox__input__text"/>
-          <button type="submit" name="registerSubmit">Registrieren</button>
-        </form>
-      </div>
-    </div>
 
     <!-- Passwort vergessen -->
 
@@ -96,5 +69,15 @@
     </div>
     <div class="alertcontainer" style="margin-top: 0 !important;" id="alertcontainer"></div>
     <script src="./assets/js/functions.js"></script>
+    <?php
+
+      include "./assets/php/functions.php";
+      if($_GET['attempted'] == "y") {
+        print_r("<script>spawnAlert('error','Invalid login Data');</script>");
+      }
+      if(!checkSQL()) {
+        print_r("<script>spawnAlert('error','SQL not connected!'); console.log('SQL Connection lost');</script>");
+      }
+    ?>
   </body>
 </html>
