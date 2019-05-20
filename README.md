@@ -47,7 +47,7 @@ sudo apt-get install apache2
 ```
 - If you need to install PHP  
 ```sh
-sudo apt-update && apt-upgrade 
+sudo apt-get update && sudo apt-get upgrade 
 sudo apt install php7.3 php7.3-cli php7.3-common
 ```
 - To check your PHP Installation
