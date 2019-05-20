@@ -35,6 +35,8 @@ In order to set-up the LAMA interface, you need:
 - A valid PHP installation (I tested on 7.3)  
 - A SQL Database  
 - The LAMA-SP Plugin installed on your CS:GO Server  
+## Optional  
+- If you want the 'performance' plugin to work, you need to have http://www.phpservermonitor.org/ installed on the target Server.  
 ## Install
 - Go to your Webservers Filepath (Apache default /var/www/html)  
 ```sh
@@ -47,8 +49,11 @@ sudo apt-get install apache2
 ```
 - If you need to install PHP  
 ```sh
-sudo apt-update && apt-upgrade 
-sudo apt install php7.3 php7.3-cli php7.3-common
+sudo apt install lsb-release apt-transport-https ca-certificates
+sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.3.list
+sudo apt update
+sudo apt-get install php7.3 php-pear
 ```
 - To check your PHP Installation
 ```sh
