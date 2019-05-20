@@ -7,6 +7,9 @@
         header('Location: login.php');
         die();
       }
+      if(!isset($_GET['viewframe'])) {
+        $_GET['viewframe'] = 'home';
+      }
     ?>
     <title>LAMA Server Manager</title>
     <meta charset="utf-8">
@@ -93,6 +96,10 @@
       </div>
     </section>
     <div class="alertcontainer" id="alertcontainer"></div>
+    <?php
+      // Changing the viewframe to the specified URL
+      print_r("<script>switchViewID(".$_GET['viewframe'].")</script>")
+    ?>
     <script>
       if(document.getElementById('contentframe').src == "") {
         document.getElementById('contentframe').src = "./plugins/home.php";

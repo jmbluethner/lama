@@ -6,6 +6,9 @@ function goBack() {
 function switchView(source) {
   document.getElementById('contentframe').src = "./plugins/"+source.id+".php";
 }
+function switchViewID(source) {
+  document.getElementById('contentframe').src = "./plugins/"+source+".php";
+}
 function collapsePane(pane) {
   if(document.getElementById(pane).style.height == "89px") {
     document.getElementById(pane).style.height = "auto";

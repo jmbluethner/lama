@@ -79,6 +79,8 @@
           </div>
           <select class="select_line">
             <option></option>
+            <!-- Hier kommt ein Loop hin, der alle .cfgs auf dem Server getted -->
+            <!-- Lösung via page auf zielserver + curl von manage Server -->
             <option>server.cfg</option>
             <option>matchmaking.cfg</option>
             <option>kniferound.cfg</option>
