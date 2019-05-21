@@ -31,6 +31,9 @@ function isFrameLoading() {
       hideLoader();
     };
 }
+function showStatus(status) {
+  document.getElementById('loadingstatus').innerHTML += status+"<br>";
+}
 function idInUse(id) {
   var toCheck = document.getElementById(id);
   if(toCheck) {
@@ -43,6 +46,8 @@ function spawnAlert(type,content) {
     var bc = "var(--warning)";
   } else if(type=='error') {
     var bc = "var(--critical)";
+  } else if(type=='message') {
+    var bc = "var(--message)";
   } else {
     spawnAlert('warning','An element tried to spawn an alert, but has not specified a valid alert type.');
     return false;

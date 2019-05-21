@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
   </head>
   <body class="framebody">
+
     <h1>Servers</h1>
+    <span id="loadingstatus"></span>
 
     <div class="pane" id="pane_manageServers">
       <h3>Manage Servers</h3>
@@ -26,6 +28,18 @@
         <button type="submit" name="addServer" class="buttonLarge">Add Server to Database</button>
       </form>
     </div>
+
+    <?php
+      $config = include('../config.php');
+      $SQLhost = $config['SQLhost'];
+      $SQLdbname = $config['SQLdbname'];
+      $SQLuser = $config['SQLuser'];
+      $SQLpass = $config['SQLpass'];
+
+      // Loop thru all Rows and generate panes...
+      
+    ?>
+
 
     <div class="pane" id="pane_ServerDetail_1">
       <h3>[ @DIE-LAN ] Tournament #01</h3>
@@ -105,10 +119,45 @@
       <button class="button_warning">Remove Server from Database</button>
     </div>
 
+
+    <div class="alertcontainer" id="alertcontainer" style="margin-top: 0 !important"></div>
     <script src="../assets/js/functions.js"></script>
     <?php
       if(isset($_GET['addServer'])) {
         // Check if IP is pingable, than add to Database
+        print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
+        set_time_limit(0);
+        $fp = fsockopen($_GET['Sip'], $_GET['Sport'], $errno, $errstr, 300);
+        if(! $fp)
+        {
+          print_r('<script>showStatus("Host not reachable! Check IP and Port. Than try again.")</script>');
+          die();
+        }
+        else
+        {
+          print_r('<script>showStatus("Host successfully pinged!")</script>');
+        }
+        print_r('<script>showStatus("Adding Server to Database ...")</script>');
+
+        $insertIP = $_GET['Sip'];
+        $insertPort = $_GET['Sport'];
+        $insertRcon = $_GET['Srcon'];
+
+        $conn = new mysqli($SQLhost, $SQLuser, $SQLpass, $SQLdbname);
+
+        // Check if Server already in DB
+
+        $sql = "SELECT * FROM gameservers WHERE ip='$insertIP'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          print_r('<script>showStatus("Server already registered in Database. Skipping request...")</script>');
+          die();
+        }
+
+        $sql = "INSERT INTO gameservers (ip,port,rconpw) VALUES ('$insertIP','$insertPort','$insertRcon')";
+        $result = $conn->query($sql);
+        print_r('<script>showStatus("Successfully added Server to Database!")</script>');
       }
     ?>
   </body>
