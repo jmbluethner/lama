@@ -49,6 +49,21 @@
       for($lpc=0;$lpc<$hits;$lpc++) {
         $paneID = rand(0,99999999);
 
+        // Get all Server Data
+
+        $sql = "SELECT * FROM gameservers LIMIT 1 OFFSET $lpc--";
+        $result = $conn->query($sql);
+        while($row = $result->fetch_assoc()) {
+          $serverip = $row['ip'];
+          $serverport = $row['port'];
+          $serverrcon = $row['rconpw'];
+        }
+
+        /*
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, "../scq/queryUserdata.php?ip=".$serverip."&port=".$serverport);
+        $result = curl_exec($curl);
+        */
     ?>
 
     <div class="pane" id='pane_ServerDetail_<?php print_r($paneID) ?>'>
@@ -57,7 +72,7 @@
         <i class="fas fa-chevron-up" id="pane_ServerDetail_<?php print_r($paneID) ?>_chevron"></i>
       </button>
       <div style="height: 35px; width: 1px;"></div>
-      <h4>Add server</h4>
+      <h4>Server: <?php print_r($serverip) ?> | <?php print_r($serverport) ?></h4>
       <div class="mapimage"></div>
       <div class="servertiles_wrapper flexwrap_line_wrap">
         <div class="servertile_border">
@@ -126,7 +141,10 @@
       <div class="serverconsole">
         <span>LGC :></span><form><input type="text"></input></form>
       </div>
-      <button class="button_warning">Remove Server from Database</button>
+      <form method="get" action="servers.php">
+        <input type="hidden" name="ipToRemove" value="<?php print_r($serverip) ?>" />
+        <button type="submit" name="removeServer" class="button_warning">Remove Server from Database</button>
+      </form>
     </div>
 
 
@@ -170,6 +188,16 @@
         $sql = "INSERT INTO gameservers (ip,port,rconpw) VALUES ('$insertIP','$insertPort','$insertRcon')";
         $result = $conn->query($sql);
         print_r('<script>showStatus("Successfully added Server to Database!<br>Refresh the servers Plugin by clicking on it in the left menu.")</script>');
+      }
+
+      // Remove a Server from the Database
+      if(isset($_GET['removeServer'])) {
+        print_r('<script>showStatus("Getting IP of the Server which has to get removed ..")</script>');
+        $serveripRemove = $_GET['ipToRemove'];
+        print_r('<script>showStatus("Deleting entry from Database ...")</script>');
+        $sql = "DELETE FROM gameservers WHERE ip='$serveripRemove'";
+        $result = $conn->query($sql);
+        print_r('<script>showStatus("Successfully removed Server from Database!<br>Refresh the servers Plugin by clicking on it in the left menu.")</script>');
       }
     ?>
   </body>

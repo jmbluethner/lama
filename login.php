@@ -38,7 +38,7 @@
 
         <!-- LOGIN -->
 
-        <form action="./checkLogin.php" class="login__form" method="post">
+        <form autocomplete="false" action="./checkLogin.php" class="login__form" method="post">
           <input type="email" placeholder="E-Mail" name="loginMail" />
           <input type="password" placeholder="Passwort" name="loginPassword" />
           <button type="submit" name="requestLogin">Login</button>
