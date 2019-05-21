@@ -3,13 +3,11 @@
 
 	use xPaw\SourceQuery\SourceQuery;
 
-	// For the sake of this example
-	Header( 'Content-Type: text/plain' );
-	Header( 'X-Content-Type-Options: nosniff' );
+	session_start();
 
 	// Edit this ->
-	define( 'SQ_SERVER_ADDR', $_GET['ip'] );
-	define( 'SQ_SERVER_PORT', $_GET['port'] );
+	define( 'SQ_SERVER_ADDR', $_SESSION['ip'] );
+	define( 'SQ_SERVER_PORT', $_SESSION['port'] );
 	define( 'SQ_TIMEOUT',     1 );
 	define( 'SQ_ENGINE',      SourceQuery::SOURCE );
 	// Edit this <-
@@ -20,9 +18,10 @@
 	{
 		$Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
 
-		print_r( $Query->GetInfo( ) );
-		print_r( $Query->GetPlayers( ) );
-		print_r( $Query->GetRules( ) );
+		print_r( $Query->GetInfo( ));
+		//print_r( $Query->GetPlayers( ));
+		//print_r( $Query->GetRules( ));
+
 	}
 	catch( Exception $e )
 	{

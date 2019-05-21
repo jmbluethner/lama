@@ -61,12 +61,17 @@
 
         // Example Call for queryUserdata.php : queryUserdata.php?ip=87.98.228.196&port=27015
 
-        /*
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, "../scq/queryUserdata.php?ip=".$serverip."&port=".$serverport);
-        $result = curl_exec($curl);
-        */
-        
+        session_Start();
+        $_SESSION['ip'] = $serverip;
+        $_SESSION['port'] = $serverport;
+
+        ob_start();
+        require "../scq/queryUserdata.php";
+        $content = ob_get_contents();
+        ob_end_clean();
+
+        print_r($content);
+
     ?>
 
     <div class="pane" id='pane_ServerDetail_<?php print_r($paneID) ?>'>
