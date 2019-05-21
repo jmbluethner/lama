@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
     <link rel="stylesheet" href="../assets/css/dashboard.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
+    <script src="../assets/js/functions.js"></script>
   </head>
   <body class="framebody">
 
@@ -36,15 +37,24 @@
       $SQLuser = $config['SQLuser'];
       $SQLpass = $config['SQLpass'];
 
+      $conn = new mysqli($SQLhost, $SQLuser, $SQLpass, $SQLdbname);
+
+      $sql = "SELECT * FROM gameservers";
+      $result = $conn->query($sql);
+
+      $hits = $result->num_rows;
+
       // Loop thru all Rows and generate panes...
-      
+
+      for($lpc=0;$lpc<$hits;$lpc++) {
+        $paneID = rand(0,99999999);
+
     ?>
 
-
-    <div class="pane" id="pane_ServerDetail_1">
+    <div class="pane" id='pane_ServerDetail_<?php print_r($paneID) ?>'>
       <h3>[ @DIE-LAN ] Tournament #01</h3>
-      <button class="pane_collapse" onclick="collapsePane('pane_ServerDetail_1')">
-        <i class="fas fa-chevron-up" id="pane_ServerDetail_1_chevron"></i>
+      <button class="pane_collapse" onclick="collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')">
+        <i class="fas fa-chevron-up" id="pane_ServerDetail_<?php print_r($paneID) ?>_chevron"></i>
       </button>
       <div style="height: 35px; width: 1px;"></div>
       <h4>Add server</h4>
@@ -120,9 +130,13 @@
     </div>
 
 
-    <div class="alertcontainer" id="alertcontainer" style="margin-top: 0 !important"></div>
-    <script src="../assets/js/functions.js"></script>
     <?php
+      }
+    ?>
+
+    <div class="alertcontainer" id="alertcontainer" style="margin-top: 0 !important"></div>
+    <?php
+      // Add a Server to the 'gameservers' table in Database
       if(isset($_GET['addServer'])) {
         // Check if IP is pingable, than add to Database
         print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
@@ -142,8 +156,6 @@
         $insertIP = $_GET['Sip'];
         $insertPort = $_GET['Sport'];
         $insertRcon = $_GET['Srcon'];
-
-        $conn = new mysqli($SQLhost, $SQLuser, $SQLpass, $SQLdbname);
 
         // Check if Server already in DB
 

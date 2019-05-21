@@ -34,6 +34,14 @@ function isFrameLoading() {
 function showStatus(status) {
   document.getElementById('loadingstatus').innerHTML += status+"<br>";
 }
+function grabValidServerId() {
+  while(true) {
+    var tryId = getRandomInt(0,99999);
+    if(!idInUse('pane_ServerDetail_'+tryId)) {
+      return 'pane_ServerDetail_'+tryId;
+    }
+  }
+}
 function idInUse(id) {
   var toCheck = document.getElementById(id);
   if(toCheck) {

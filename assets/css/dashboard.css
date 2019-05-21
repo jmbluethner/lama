@@ -772,6 +772,9 @@ select {
   font-style: italic;
   font-size: 13px;
 }
+#pane_ServerDetail_template {
+  display: none;
+}
 
 @media screen and (max-width: 700px) {
   .sidebar_container {
