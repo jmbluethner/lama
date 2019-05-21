@@ -169,7 +169,7 @@
 
         $sql = "INSERT INTO gameservers (ip,port,rconpw) VALUES ('$insertIP','$insertPort','$insertRcon')";
         $result = $conn->query($sql);
-        print_r('<script>showStatus("Successfully added Server to Database!")</script>');
+        print_r('<script>showStatus("Successfully added Server to Database!<br>Refresh the servers Plugin by clicking on it in the left menu.")</script>');
       }
     ?>
   </body>
