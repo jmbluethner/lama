@@ -17,3 +17,4 @@
 		const BAD_PASSWORD = 1;
 		const BANNED = 2;
 	}
+?>

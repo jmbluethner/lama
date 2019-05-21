@@ -19,3 +19,4 @@
 		const BUFFER_NOT_EMPTY = 3;
 		const CHECKSUM_MISMATCH = 4;
 	}
+?>

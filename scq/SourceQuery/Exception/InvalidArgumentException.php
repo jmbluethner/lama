@@ -16,3 +16,4 @@
 	{
 		const TIMEOUT_NOT_INTEGER = 1;
 	}
+?>

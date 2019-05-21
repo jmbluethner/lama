@@ -25,25 +25,25 @@
 	{
 		/**
 		 * Buffer
-		 * 
+		 *
 		 * @var string
 		 */
 		private $Buffer;
-		
+
 		/**
 		 * Buffer length
-		 * 
+		 *
 		 * @var int
 		 */
 		private $Length;
-		
+
 		/**
 		 * Current position in buffer
-		 * 
+		 *
 		 * @var int
 		 */
 		private $Position;
-		
+
 		/**
 		 * Sets buffer
 		 *
@@ -55,7 +55,7 @@
 			$this->Length   = StrLen( $Buffer );
 			$this->Position = 0;
 		}
-		
+
 		/**
 		 * Get remaining bytes
 		 *
@@ -65,7 +65,7 @@
 		{
 			return $this->Length - $this->Position;
 		}
-		
+
 		/**
 		 * Gets data from buffer
 		 *
@@ -79,9 +79,9 @@
 			{
 				return '';
 			}
-			
+
 			$Remaining = $this->Remaining( );
-			
+
 			if( $Length === -1 )
 			{
 				$Length = $Remaining;
@@ -90,14 +90,14 @@
 			{
 				return '';
 			}
-			
+
 			$Data = SubStr( $this->Buffer, $this->Position, $Length );
-			
+
 			$this->Position += $Length;
-			
+
 			return $Data;
 		}
-		
+
 		/**
 		 * Get byte from buffer
 		 *
@@ -107,7 +107,7 @@
 		{
 			return Ord( $this->Get( 1 ) );
 		}
-		
+
 		/**
 		 * Get short from buffer
 		 *
@@ -119,12 +119,12 @@
 			{
 				throw new InvalidPacketException( 'Not enough data to unpack a short.', InvalidPacketException::BUFFER_EMPTY );
 			}
-			
+
 			$Data = UnPack( 'v', $this->Get( 2 ) );
-			
+
 			return $Data[ 1 ];
 		}
-		
+
 		/**
 		 * Get long from buffer
 		 *
@@ -136,12 +136,12 @@
 			{
 				throw new InvalidPacketException( 'Not enough data to unpack a long.', InvalidPacketException::BUFFER_EMPTY );
 			}
-			
+
 			$Data = UnPack( 'l', $this->Get( 4 ) );
-			
+
 			return $Data[ 1 ];
 		}
-		
+
 		/**
 		 * Get float from buffer
 		 *
@@ -153,12 +153,12 @@
 			{
 				throw new InvalidPacketException( 'Not enough data to unpack a float.', InvalidPacketException::BUFFER_EMPTY );
 			}
-			
+
 			$Data = UnPack( 'f', $this->Get( 4 ) );
-			
+
 			return $Data[ 1 ];
 		}
-		
+
 		/**
 		 * Get unsigned long from buffer
 		 *
@@ -170,12 +170,12 @@
 			{
 				throw new InvalidPacketException( 'Not enough data to unpack an usigned long.', InvalidPacketException::BUFFER_EMPTY );
 			}
-			
+
 			$Data = UnPack( 'V', $this->Get( 4 ) );
-			
+
 			return $Data[ 1 ];
 		}
-		
+
 		/**
 		 * Read one string from buffer ending with null byte
 		 *
@@ -184,16 +184,17 @@
 		public function GetString( )
 		{
 			$ZeroBytePosition = StrPos( $this->Buffer, "\0", $this->Position );
-			
+
 			if( $ZeroBytePosition === false )
 			{
 				return '';
 			}
-			
+
 			$String = $this->Get( $ZeroBytePosition - $this->Position );
-			
+
 			$this->Position++;
-			
+
 			return $String;
 		}
 	}
+?>

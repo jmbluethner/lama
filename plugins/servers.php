@@ -59,6 +59,7 @@
           $serverrcon = $row['rconpw'];
         }
 
+        // Example Call for queryUserdata.php : queryUserdata.php?ip=87.98.228.196&port=27015
         /*
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, "../scq/queryUserdata.php?ip=".$serverip."&port=".$serverport);

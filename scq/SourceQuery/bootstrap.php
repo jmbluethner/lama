@@ -25,3 +25,4 @@
 	require_once __DIR__ . '/SourceRcon.php';
 	require_once __DIR__ . '/GoldSourceRcon.php';
 	require_once __DIR__ . '/SourceQuery.php';
+?>

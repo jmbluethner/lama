@@ -18,3 +18,4 @@
 		const NOT_CONNECTED = 2;
 		const CONNECTION_FAILED = 3;
 	}
+?>
