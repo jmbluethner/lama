@@ -157,37 +157,42 @@
       // Add a Server to the 'gameservers' table in Database
       if(isset($_GET['addServer'])) {
         // Check if IP is pingable, than add to Database
-        print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
-        set_time_limit(0);
-        $fp = fsockopen($_GET['Sip'], $_GET['Sport'], $errno, $errstr, 300);
-        if(! $fp)
-        {
-          print_r('<script>showStatus("Host not reachable! Check IP and Port. Than try again.")</script>');
-          die();
+        if($_GET['Sip'] != "" && $_GET['Sport'] != "") {
+          print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
+          set_time_limit(0);
+          $fp = fsockopen($_GET['Sip'], $_GET['Sport'], $errno, $errstr, 300);
+          if(! $fp)
+          {
+            print_r('<script>showStatus("Host not reachable! Check IP and Port. Than try again.")</script>');
+            die();
+          }
+          else
+          {
+            print_r('<script>showStatus("Host successfully pinged!")</script>');
+          }
+          print_r('<script>showStatus("Adding Server to Database ...")</script>');
+
+          $insertIP = $_GET['Sip'];
+          $insertPort = $_GET['Sport'];
+          $insertRcon = $_GET['Srcon'];
+
+          // Check if Server already in DB
+
+          $sql = "SELECT * FROM gameservers WHERE ip='$insertIP'";
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+            print_r('<script>showStatus("Server already registered in Database. Skipping request...")</script>');
+            die();
+          }
+
+          $sql = "INSERT INTO gameservers (ip,port,rconpw) VALUES ('$insertIP','$insertPort','$insertRcon')";
+          $result = $conn->query($sql);
+          print_r('<script>showStatus("Successfully added Server to Database!<br>Refresh the servers Plugin by clicking on it in the left menu.")</script>');
+        } else {
+          print_r('<script>showStatus("IP and Port must be provided!")</script>');
         }
-        else
-        {
-          print_r('<script>showStatus("Host successfully pinged!")</script>');
-        }
-        print_r('<script>showStatus("Adding Server to Database ...")</script>');
 
-        $insertIP = $_GET['Sip'];
-        $insertPort = $_GET['Sport'];
-        $insertRcon = $_GET['Srcon'];
-
-        // Check if Server already in DB
-
-        $sql = "SELECT * FROM gameservers WHERE ip='$insertIP'";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-          print_r('<script>showStatus("Server already registered in Database. Skipping request...")</script>');
-          die();
-        }
-
-        $sql = "INSERT INTO gameservers (ip,port,rconpw) VALUES ('$insertIP','$insertPort','$insertRcon')";
-        $result = $conn->query($sql);
-        print_r('<script>showStatus("Successfully added Server to Database!<br>Refresh the servers Plugin by clicking on it in the left menu.")</script>');
       }
 
       // Remove a Server from the Database
