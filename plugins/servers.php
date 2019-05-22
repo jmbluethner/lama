@@ -45,7 +45,7 @@
       $hits = $result->num_rows;
 
       // Loop thru all Rows and generate panes...
-
+      session_Start();
       for($lpc=0;$lpc<$hits;$lpc++) {
         $paneID = rand(0,99999999);
 
@@ -61,16 +61,15 @@
 
         // Example Call for queryUserdata.php : queryUserdata.php?ip=87.98.228.196&port=27015
 
-        session_Start();
         $_SESSION['ip'] = $serverip;
         $_SESSION['port'] = $serverport;
 
         ob_start();
-        require "../scq/queryUserdata.php";
+        require_once "../scq/queryUserdata.php";
         $content = ob_get_contents();
         ob_end_clean();
 
-        print_r($queryServerinfo);
+        //print_r($queryServerinfo);
 
     ?>
 
@@ -167,6 +166,7 @@
         // Check if IP is pingable, than add to Database
         if($_GET['Sip'] != "" && $_GET['Sport'] != "") {
           print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
+
           set_time_limit(0);
           $fp = fsockopen($_GET['Sip'], $_GET['Sport'], $errno, $errstr, 300);
           if(! $fp)
@@ -178,6 +178,7 @@
           {
             print_r('<script>showStatus("Host successfully pinged!")</script>');
           }
+
           print_r('<script>showStatus("Adding Server to Database ...")</script>');
 
           $insertIP = $_GET['Sip'];
