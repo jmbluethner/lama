@@ -1,4 +1,5 @@
 <?php
+
 	require __DIR__ . '/SourceQuery/bootstrap.php';
 
 	use xPaw\SourceQuery\SourceQuery;
@@ -31,4 +32,6 @@
 	{
 		$Query->Disconnect( );
 	}
+
+
 ?>

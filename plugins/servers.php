@@ -31,6 +31,8 @@
     </div>
 
     <?php
+      error_reporting(E_ALL ^ E_NOTICE);
+
       $config = include('../config.php');
       $SQLhost = $config['SQLhost'];
       $SQLdbname = $config['SQLdbname'];
@@ -44,8 +46,11 @@
 
       $hits = $result->num_rows;
 
+      require_once "../scq/queryUserdata.php";
+
       // Loop thru all Rows and generate panes...
       session_Start();
+
       for($lpc=0;$lpc<$hits;$lpc++) {
         $paneID = rand(0,99999999);
 
@@ -64,10 +69,12 @@
         $_SESSION['ip'] = $serverip;
         $_SESSION['port'] = $serverport;
 
+
         ob_start();
         require_once "../scq/queryUserdata.php";
         $content = ob_get_contents();
         ob_end_clean();
+
 
         //print_r($queryServerinfo);
 
