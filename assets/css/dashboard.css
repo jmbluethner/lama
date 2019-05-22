@@ -635,19 +635,6 @@ select {
   background-color: var(--secondary);
   position: relative;
 }
-.mapimage::after {
-  position: absolute;
-  content: 'Failed to load any Image. Map is maybe not in Database.';
-  display: block;
-  color: var(--textSecondary);
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
-  font-size: 15px;
-  text-align: center;
-}
 .servertiles_wrapper {
   margin-top: 20px;
   width: 100%;

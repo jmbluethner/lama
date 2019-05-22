@@ -31,7 +31,7 @@
     </div>
 
     <?php
-      error_reporting(E_ALL ^ E_NOTICE);
+      error_reporting(E_ERROR | E_PARSE);
 
       $config = include('../config.php');
       $SQLhost = $config['SQLhost'];
@@ -46,10 +46,8 @@
 
       $hits = $result->num_rows;
 
-      require_once "../scq/queryUserdata.php";
 
       // Loop thru all Rows and generate panes...
-      session_Start();
 
       for($lpc=0;$lpc<$hits;$lpc++) {
         $paneID = rand(0,99999999);
@@ -58,33 +56,39 @@
 
         $sql = "SELECT * FROM gameservers LIMIT 1 OFFSET $lpc--";
         $result = $conn->query($sql);
-        while($row = $result->fetch_assoc()) {
-          $serverip = $row['ip'];
-          $serverport = $row['port'];
-          $serverrcon = $row['rconpw'];
-        }
 
-        // Example Call for queryUserdata.php : queryUserdata.php?ip=87.98.228.196&port=27015
+        $row = $result->fetch_assoc();
+        $serverip = $row['ip'];
+        $serverport = $row['port'];
+        $serverrcon = $row['rconpw'];
 
-        $_SESSION['ip'] = $serverip;
-        $_SESSION['port'] = $serverport;
+        $socket = @fsockopen("udp://".$serverip, $serverport , $errno, $errstr, 1);
+        stream_set_timeout($socket, 1);
+        stream_set_blocking($socket, TRUE);
+        fwrite($socket, "\xFF\xFF\xFF\xFF\x54Source Engine Query\x00");
+        $response = fread($socket, 4096);
+        @fclose($socket);
+        $packet = explode("\x00", substr($response, 6), 5);
+        $server = array();
+        $server['name'] = $packet[0];
+        $server['map'] = $packet[1];
+        $server['game'] = $packet[2];
+        $server['description'] = $packet[3];
+        $inner = $packet[4];
+        $server['players'] = ord(substr($inner, 2, 1));
+        $server['playersmax'] = ord(substr($inner, 3, 1));
+        $server['password'] = ord(substr($inner, 7, 1));
+        $server['vac'] = ord(substr($inner, 8, 1));
 
-
-        ob_start();
-        require_once "../scq/queryUserdata.php";
-        $content = ob_get_contents();
-        ob_end_clean();
-
-
-        //print_r($queryServerinfo);
 
     ?>
 
     <div class="pane" id='pane_ServerDetail_<?php print_r($paneID) ?>'>
-      <h3><?php print_r($queryServerinfo['HostName']); ?></h3>
+      <h3><?php print_r($server['name']); ?></h3>
       <button class="pane_collapse" onclick="collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')">
         <i class="fas fa-chevron-up" id="pane_ServerDetail_<?php print_r($paneID) ?>_chevron"></i>
       </button>
+      <script>collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')</script>
       <div style="height: 35px; width: 1px;"></div>
       <h4>Server: <?php print_r($serverip) ?> | <?php print_r($serverport) ?></h4>
       <div class="mapimage"></div>
@@ -93,7 +97,7 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="fas fa-eye"></i></div>
             <div class="servertile_text">
-              <span><?php print_r($queryServerinfo['Players']); ?> / <?php print_r($queryServerinfo['MaxPlayers']); ?></span><br/>
+              <span><?php print_r($server['players']); ?> / <?php print_r($server['playersmax']); ?></span><br/>
               <span>Players</span>
             </div>
           </div>
@@ -102,7 +106,7 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="fas fa-shield-alt"></i></div>
             <div class="servertile_text">
-              <span><?php if ($queryServerinfo['Secure'] == 1) { print_r('true');} else {print_r('false');} ?></span><br/>
+              <span><?php if ($server['vac'] == 1) { print_r('true');} else {print_r('false');} ?></span><br/>
               <span>VAC</span>
             </div>
           </div>
@@ -111,7 +115,7 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="far fa-map"></i></div>
             <div class="servertile_text">
-              <span><?php print_r($queryServerinfo['Map']); ?></span><br/>
+              <span><?php print_r($server['map']); ?></span><br/>
               <span>Map</span>
             </div>
           </div>
@@ -120,8 +124,8 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="far fa-flag"></i></div>
             <div class="servertile_text">
-              <span><?php if ($queryServerinfo['Os'] == 'w') { print_r('Windows');} else {print_r('Linux');} ?></span><br/>
-              <span>OS</span>
+              <span><?php print_r($server['game']); ?></span><br/>
+              <span>Mode</span>
             </div>
           </div>
         </div>
