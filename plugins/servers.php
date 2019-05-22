@@ -70,12 +70,12 @@
         $content = ob_get_contents();
         ob_end_clean();
 
-        print_r($content);
+        print_r($queryServerinfo);
 
     ?>
 
     <div class="pane" id='pane_ServerDetail_<?php print_r($paneID) ?>'>
-      <h3>[ @DIE-LAN ] Tournament #01</h3>
+      <h3><?php print_r($queryServerinfo['HostName']); ?></h3>
       <button class="pane_collapse" onclick="collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')">
         <i class="fas fa-chevron-up" id="pane_ServerDetail_<?php print_r($paneID) ?>_chevron"></i>
       </button>
@@ -87,7 +87,7 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="fas fa-eye"></i></div>
             <div class="servertile_text">
-              <span>6/10</span><br/>
+              <span><?php print_r($queryServerinfo['Players']); ?> / <?php print_r($queryServerinfo['MaxPlayers']); ?></span><br/>
               <span>Players</span>
             </div>
           </div>
@@ -96,7 +96,7 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="fas fa-shield-alt"></i></div>
             <div class="servertile_text">
-              <span>Enabled</span><br/>
+              <span><?php if ($queryServerinfo['Secure'] == 1) { print_r('true');} else {print_r('false');} ?></span><br/>
               <span>VAC</span>
             </div>
           </div>
@@ -105,7 +105,7 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="far fa-map"></i></div>
             <div class="servertile_text">
-              <span>de_mirage</span><br/>
+              <span><?php print_r($queryServerinfo['Map']); ?></span><br/>
               <span>Map</span>
             </div>
           </div>
@@ -114,8 +114,8 @@
           <div class="servertile">
             <div class="servertile_icon"><i class="far fa-flag"></i></div>
             <div class="servertile_text">
-              <span>Defuse</span><br/>
-              <span>Gamemode</span>
+              <span><?php if ($queryServerinfo['Os'] == 'w') { print_r('Windows');} else {print_r('Linux');} ?></span><br/>
+              <span>OS</span>
             </div>
           </div>
         </div>

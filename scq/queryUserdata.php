@@ -18,7 +18,7 @@
 	{
 		$Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
 
-		print_r( $Query->GetInfo( ));
+		$queryServerinfo =  $Query->GetInfo( );
 		//print_r( $Query->GetPlayers( ));
 		//print_r( $Query->GetRules( ));
 
