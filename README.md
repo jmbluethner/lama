@@ -24,6 +24,9 @@ I can't fix major Bugs if they come from xPaw's Query. But so far I haven't seen
 
 I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/PHP-Source-Query  
 Check him out too!  
+## How does it look?  
+![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
+<img src="https://cdn.nighttimedev.com/images/lama/lama1.png" data-canonical-src="https://cdn.nighttimedev.com/images/lama/lama1.png" height="500" />  
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
