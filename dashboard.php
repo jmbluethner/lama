@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="./assets/css/dashboard.css" type="text/css">
     <link rel="stylesheet" href="./assets/css/alert.css" type="text/css">
     <meta name="theme-color" content="#3b3b3b">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
