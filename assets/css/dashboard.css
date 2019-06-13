@@ -218,7 +218,6 @@ section {
 .sidebar_plugin:hover {
   border-left: 5px solid var(--accent);
   padding-left: 27px;
-  background-color: var(--active);
   cursor: pointer;
 }
 

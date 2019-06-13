@@ -82,7 +82,7 @@
                     if (strpos($pluginSelected, '.php') !== false) {
                       $pluginOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected);
                       $pluginSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected));
-                      print_r("<button onclick='switchView(this); isFrameLoading();' class='sidebar_plugin' id='".$pluginOriginal."'>".$pluginSelected."</button>");
+                      print_r("<button onclick='switchView(this); isFrameLoading(); tintPlugin(this.id)' class='sidebar_plugin' id='".$pluginOriginal."'>".$pluginSelected."</button>");
                     }
                   }
                 }
