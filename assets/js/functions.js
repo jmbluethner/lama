@@ -3,6 +3,19 @@ var paneheight;
 function goBack() {
   window.history.go(-1);
 }
+function untintAll() {
+  var pluginAmount =  document.getElementsByClassName('sidebar_plugin');
+  for(var i = 0, j = pluginAmount.length; i < j; i++) {
+    document.getElementsByClassName('sidebar_plugin')[i].style.color = "var(--textSecondary)";
+    document.getElementsByClassName('sidebar_plugin')[i].style.backgroundColor = "var(--secondary)";
+  }
+}
+function tintPlugin(id) {
+  untintAll();
+  document.getElementById(id).style.color = "var(--accent)";
+  document.getElementById(id).style.backgroundColor = "var(--active)";
+}
+//tintPlugin('home');
 function switchView(source) {
   document.getElementById('contentframe').src = "./plugins/"+source.id+".php";
 }
