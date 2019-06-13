@@ -1,0 +1,15 @@
+{
+  "short_name": "LA.MA",
+  "name": "LAMA Server Manager",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/ico",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/index.php",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "theme_color": "#00B2FF"
+}
