@@ -95,6 +95,7 @@ function removeAlert(id) {
   id.parentNode.removeChild(id);
 }
 
+
 // change Root Styling: document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
 
 // JS TOOLKIT

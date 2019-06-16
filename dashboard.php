@@ -110,5 +110,6 @@
       }
     </script>
     <script>hideLoader()</script>
+    <script src="./assets/js/colors.js"></script>
   </body>
 </html>
