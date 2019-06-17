@@ -50,11 +50,13 @@
     <section>
       <div class="topbar_container">
         <div class="topbar_wrapper">
+          <a href="https://nighttimedev.com/projects/lama" target="_blank">
             <div class="topbar_logo">
               <button class="button_hidden">
                 <h1>LA.MA</h1>
               </button>
             </div>
+          </a>
           <div class="topbar_right">
             <div id="loader">
               <div class="loader"></div>

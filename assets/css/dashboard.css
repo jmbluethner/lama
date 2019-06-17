@@ -196,6 +196,7 @@ section {
   overflow: hidden;
   box-sizing: border-box;
   text-align: left;
+  cursor: pointer;
 }
 
 .sidebar_plugin {
