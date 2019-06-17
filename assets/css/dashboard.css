@@ -201,7 +201,7 @@ section {
   width: 100%;
   border: 5px solid transparent;
   outline: none;
-  color: white;
+  color: var(--textSecondary);
   border: none;
   box-sizing: border-box;
   background-color: transparent;
@@ -357,6 +357,7 @@ h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 15px;
+  color: var(--text);
 }
 
 [id^="pane_"] {
