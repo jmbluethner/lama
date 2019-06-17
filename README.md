@@ -45,6 +45,11 @@ In order to set-up the LAMA interface, you need:
 cd /var/www/html
 git clone https://github.com/nighttimedev/lama
 ```  
+- If you have to do any additional installtions (like PHP), it's strongly recommended to update & upgrade first! 
+```sh
+sudo apt-get update
+sudo apt-get upgrade
+```  
 - If you need to install apache2  
 ```sh
 sudo apt-get install apache2
