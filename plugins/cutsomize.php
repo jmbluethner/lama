@@ -16,32 +16,22 @@
         <i class="fas fa-chevron-up" id="pane_changeTheme_chevron"></i>
       </button>
       <div style="height: 35px; width: 1px;"></div>
-      <h4>HaXx0r</h4>
       <?php
-      /*
-        function createColorset(primary,secondary,tertiary,active,accent,critical,message,warning,text,text_light,textSecondary,panes,table_light,table_dark) {
-          $args = func_num_args();
 
-          print_r('
-            <button class="colorset_cont" onclick="changeTheme('.$primary.','.$secondary.','.$tertiary.','.$active.','.$accent.','.$critical.','.$message.','.$warning.','.$text.','.$text_light.','.$textSecondary.','.$panes.','.$table_light.','.$table_dark.')">
-              <div class="colorset_elem" style="background-color: '.$primary.'"></div>
-              <div class="colorset_elem" style="background-color: '.$secondary.'"></div>
-              <div class="colorset_elem" style="background-color: '.$tertiary.'"></div>
-              <div class="colorset_elem" style="background-color: '.$active.'"></div>
-              <div class="colorset_elem" style="background-color: '.$accent.'"></div>
-              <div class="colorset_elem" style="background-color: '.$critical.'"></div>
-              <div class="colorset_elem" style="background-color: '.$message.'"></div>
-              <div class="colorset_elem" style="background-color: '.$warning.'"></div>
-              <div class="colorset_elem" style="background-color: '.$text.'"></div>
-              <div class="colorset_elem" style="background-color: '.$text_light.'"></div>
-              <div class="colorset_elem" style="background-color: '.$textSecondary.'"></div>
-              <div class="colorset_elem" style="background-color: '.$panes.'"></div>
-              <div class="colorset_elem" style="background-color: '.$table_light.'"></div>
-              <div class="colorset_elem" style="background-color: '.$table_dark.'"></div>
-            </button>
-          ')
+        // Hier müssen die Sets aus der SQL DB gezogen werden
+
+        $colors = ['primary','secondary','tertiary','active','accent','critical','message','warning','text','text_light','textSecondary','panes','table_light','table_dark'];
+
+        // <h4>Name</h4>
+
+        for($i=0;$i<sizeof($colors);$i++) {
+
         }
-      */
+
+        print_r('<div class="colorset_elem" style="background-color:'.$colorcode.'"></div>');
+
+        print_r('</div>');
+
       ?>
     </div>
     <script src="../assets/js/functions.js"></script>

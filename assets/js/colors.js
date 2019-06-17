@@ -27,3 +27,6 @@ function changeTheme(primary,secondary,tertiary,active,accent,critical,message,w
 function changeRootAttribute(variable,value) {
   document.documentElement.style.setProperty(variable, value);
 }
+function generateColorset(primary,secondary,tertiary,active,accent,critical,message,warning,text,text_light,textSecondary,panes,table_light,table_dark) {
+
+}
