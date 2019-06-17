@@ -30,6 +30,17 @@ Check him out too!
 ![Screenshot3](https://i.imgur.com/cf5EM6C.jpg)  
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
 ![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
+## Featureeeees  
+- Manage ALL Gameservers which are based on the source engine  
+- NO server-sided Plugins needed (maybe coming in future updates as optional feature for server performace and so on)  
+- Good Performance thanks to a lot of testing and Code review  
+- Intuitive Frontend  
+- Works even on small devices (Phones only in Landscape, not portrait. Maybe also coming in the future.)  
+- User-Management  
+- Version-Managing and on the fly updating (Still in Development!)  
+- Inclusion of FontAwesome for an easy to use but yet beautiful UI  
+- Active Development  
+- Customizable UI / Themes
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
