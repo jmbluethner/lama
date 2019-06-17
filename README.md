@@ -72,8 +72,10 @@ The Rootdirectory will be called "$root" in this guide.
 - Step 1  
 Configure the $root/config.php to tell the Interface how to connect to your database.  
 - Step 2  
-Go to $root/install in your webbrowser to start the automatic configuration process.  
+Set your timezone in $root/config.php. All timezones here: https://www.php.net/manual/de/timezones.php  
 - Step 3  
+Go to $root/install in your webbrowser to start the automatic configuration process.  
+- Step 4  
 Done! Have fun adding and managing Source-Based gameservers :)  
   
 ## Bugs, Issues, ...
