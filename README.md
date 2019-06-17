@@ -28,6 +28,8 @@ I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/
 Check him out too!  
 ## How does it look?  
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
+![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
+![Screenshot3](https://i.imgur.com/cf5EM6C.jpg)  
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
