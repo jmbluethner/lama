@@ -91,7 +91,10 @@
             </div>
             <form method="GET" action="signOut.php">
               <button type="submit" class="sidebar_logout">
-                Logout
+                <span>
+                  Logout
+                </span>
+                <i class="fas fa-door-open"></i>
               </button>
             </form>
           </div>

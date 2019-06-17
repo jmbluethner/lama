@@ -213,7 +213,7 @@ section {
   font-size: 20px;
   font-weight: 500;
   padding-left: 22px;
-  transition: .2s;
+  transition: .2s ease;
 }
 
 .sidebar_plugin:hover {
@@ -242,6 +242,42 @@ section {
   line-height: 50px;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
+  transition: .2s ease;
+  position: relative;
+}
+
+.fa-door-open {
+  opacity: 0;
+  transition: .2s ease;
+  color: white !important;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: door;
+  font-size: 18px;
+}
+
+@keyframes door {
+  0%  {font-size: 18px; top: 15px;}
+  25% {font-size: 18px; top: 15px;}
+  45% {font-size: 24px; top: 12px;}
+  65% {font-size: 18px; top: 15px;}
+}
+
+.sidebar_logout:hover  {
+  color: var(--active);
+  cursor: pointer;
+}
+
+.sidebar_logout:hover .fa-door-open {
+  opacity: 1;
+  left: 50%;
+}
+
+.sidebar_logout i {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 0%;
+  top: 15px;
 }
 
 h1 {
