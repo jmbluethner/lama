@@ -39,7 +39,8 @@ Check him out too!
 - User-Management  
 - Version-Managing and on the fly updating (Still in Development!)  
 - Inclusion of FontAwesome for an easy to use but yet beautiful UI  
-- Active Development
+- Active Development  
+- Customizable UI / Themes
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
