@@ -6,6 +6,8 @@
 
 *A PHP based CSGO-Server management Interface for LAN Tournaments.*  
 
+This repo is a new approach to one of my older projects called "rushB", which got deleted and is no longer available.   
+
 !!! This project is NOT working currently! Everything is WIP !!!  
 
 ![Badge_License](https://img.shields.io/github/license/nighttimedev/lama.svg)
@@ -37,14 +39,16 @@ In order to set-up the LAMA interface, you need:
 - A Webserver (I tested on Apache2)  
 - A valid PHP installation (I tested on 7.3)  
 - A SQL Database  
-- The LAMA-SP Plugin installed on your CS:GO Server  
-## Optional  
-- If you want the 'performance' plugin to work, you need to have http://www.phpservermonitor.org/ installed on the target Server.  
 ## Install
-- Go to your Webservers Filepath (Apache default /var/www/html)  
+- Go to your Webservers Filepath (Apache default /var/www/html) and clone the Repo  
 ```sh
 cd /var/www/html
 git clone https://github.com/nighttimedev/lama
+```  
+- If you have to do any additional installtions (like PHP), it's strongly recommended to update & upgrade first! 
+```sh
+sudo apt-get update
+sudo apt-get upgrade
 ```  
 - If you need to install apache2  
 ```sh
@@ -61,7 +65,16 @@ sudo apt-get install php7.3 php-pear
 - To check your PHP Installation
 ```sh
 php -v
-```
+```  
+### LAMA installation / configuration  
+After you have installed everything you need on the Server, you can install and configure the Server Manager itself.  
+The Rootdirectory will be called "$root" in this guide.  
+- Step 1  
+Configure the $root/config.php to tell the Interface how to connect to your database.  
+- Step 2  
+Go to $root/install in your webbrowser to start the automatic configuration process.  
+- Step 3  
+Done! Have fun adding and managing Source-Based gameservers :)  
   
 ## Bugs, Issues, ...
 If you get any errors, which are definitely not caused by yourself, I'd love to get your error report.  
