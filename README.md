@@ -69,12 +69,11 @@ php -v
 ### LAMA installation / configuration  
 After you have installed everything you need on the Server, you can install and configure the Server Manager itself.  
 The Rootdirectory will be called "$root" in this guide.  
-<br>
 - Step 1  
 Configure the $root/config.php to tell the Interface how to connect to your database.  
 - Step 2  
 Go to $root/install in your webbrowser to start the automatic configuration process.  
-- Step 3
+- Step 3  
 Done! Have fun adding and managing Source-Based gameservers :)  
   
 ## Bugs, Issues, ...
