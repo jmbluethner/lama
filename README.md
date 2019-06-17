@@ -39,7 +39,6 @@ In order to set-up the LAMA interface, you need:
 - A Webserver (I tested on Apache2)  
 - A valid PHP installation (I tested on 7.3)  
 - A SQL Database  
-- The LAMA-SP Plugin installed on your CS:GO Server  
 ## Install
 - Go to your Webservers Filepath (Apache default /var/www/html)  
 ```sh
