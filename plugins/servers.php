@@ -91,6 +91,16 @@
       <script>collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')</script>
       <div style="height: 35px; width: 1px;"></div>
       <h4>Server: <?php print_r($serverip) ?> | <?php print_r($serverport) ?></h4>
+
+      <!--
+        This Element gets displayed below the IP when there is no RCON password supplied
+      -->
+      <?php
+        if(empty($serverrcon)) {
+          print_r('<div class="rcon_badge"><i class="fas fa-exclamation-triangle"> </i> No RCON provided</div>');
+        }
+      ?>
+
       <div class="mapimage"></div>
       <div class="servertiles_wrapper flexwrap_line_wrap">
         <div class="servertile_border">

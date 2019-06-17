@@ -5,3 +5,4 @@ The Reason is, that the early versions aren't worth logging.
 - Introduced Login-logging  
 - Implemented the 'Customize' plugin (not working atm)
 - Implemented the 'Versions' plugin (not working atm)
+- Added Badges for Servers which have no RCON pw in the DB
