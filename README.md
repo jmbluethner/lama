@@ -6,7 +6,7 @@
 
 *A PHP based CSGO-Server management Interface for LAN Tournaments.*  
 
-This repo is a new approach to one of my older projects called "rushB".  
+This repo is a new approach to one of my older projects called "rushB", which got deleted and is no longer available.   
 
 !!! This project is NOT working currently! Everything is WIP !!!  
 
