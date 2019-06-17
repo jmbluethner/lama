@@ -53,7 +53,9 @@
         die();
       } else {
 
+        //////////////////////////
         // Write to config
+        //////////////////////////
         date_default_timezone_set($config['timezone']);
         $time = date("Y-m-d H:i:s");
         $userName = $_SESSION["username"];
