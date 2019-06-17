@@ -27,8 +27,9 @@ I can't fix major Bugs if they come from xPaw's Query. But so far I haven't seen
 I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/PHP-Source-Query  
 Check him out too!  
 ## How does it look?  
+![Screenshot3](https://i.imgur.com/cf5EM6C.jpg)  
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
-<img src="https://cdn.nighttimedev.com/images/lama/lama1.png" data-canonical-src="https://cdn.nighttimedev.com/images/lama/lama1.png" height="500" />  
+![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
@@ -72,10 +73,12 @@ The Rootdirectory will be called "$root" in this guide.
 - Step 1  
 Configure the $root/config.php to tell the Interface how to connect to your database.  
 - Step 2  
-Set your timezone in $root/config.php. All timezones here: https://www.php.net/manual/de/timezones.php  
+Set your timezone in $root/config.php. All timezones here: https://www.php.net/manual/de/timezones.php. This is  neccessary in order to get the correct time (for example in the log file).    
 - Step 3  
-Go to $root/install in your webbrowser to start the automatic configuration process.  
+Set all other minor Variables in the log file.  
 - Step 4  
+Go to $root/install in your webbrowser to start the automatic configuration process. IF any errors occur, they SHOULD be described well in order to tell you how to fix it. If you have any problems, feel free to contact me via the Mail which is given at the end of the readme.  
+- Step 5  
 Done! Have fun adding and managing Source-Based gameservers :)  
   
 ## Bugs, Issues, ...
