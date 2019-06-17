@@ -40,7 +40,7 @@ In order to set-up the LAMA interface, you need:
 - A valid PHP installation (I tested on 7.3)  
 - A SQL Database  
 ## Install
-- Go to your Webservers Filepath (Apache default /var/www/html)  
+- Go to your Webservers Filepath (Apache default /var/www/html) and clone the Repo  
 ```sh
 cd /var/www/html
 git clone https://github.com/nighttimedev/lama
