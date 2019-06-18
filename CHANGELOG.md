@@ -1,4 +1,16 @@
 
+# Release 0.4
+<hr>
+### Features  
+- Added changelog view on /plugins/home
+### Fixes
+<br>
+# Release 0.3
+<hr>
+### Features  
+- Added fully working /install
+### Fixes
+<br>
 # Release 0.2
 <hr>
 ### Features    
