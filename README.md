@@ -55,7 +55,7 @@ In order to set-up the LAMA interface, you need:
 - A SQL Database  
 Optional:  
 If you want to have the "forgot password" function, you need to hava a Postix server installed on your system, so php can send Mails.  
-## Install
+## Install 
 - Go to your Webservers Filepath (Apache default /var/www/html) and clone the Repo  
 ```sh
 cd /var/www/html
