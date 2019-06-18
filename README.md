@@ -27,10 +27,12 @@ I can't fix major Bugs if they come from xPaw's Query. But so far I haven't seen
 I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/PHP-Source-Query  
 Check him out too!  
 ## How does it look?  
+![Screenshot4](https://i.imgur.com/kfplPAT.png)  
 ![Screenshot3](https://i.imgur.com/cf5EM6C.jpg)  
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
 ![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
 ## Featureeeees  
+- Installer to set up SQL completely automated  
 - Manage ALL Gameservers which are based on the source engine  
 - NO server-sided Plugins needed (maybe coming in future updates as optional feature for server performace and so on)  
 - Good Performance thanks to a lot of testing and Code review  
