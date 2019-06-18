@@ -100,6 +100,20 @@ function spawnAlert(type,content) {
 function removeAlert(id) {
   id.parentNode.removeChild(id);
 }
+async function showLightbox() {
+  document.getElementById('lbox').style.display = 'block';
+  await sleep(40);
+  document.getElementById('lbox').style.opacity = 1;
+}
+async function hideLightbox() {
+  document.getElementById('lbox').style.display = 'none';
+  await sleep(40);
+  document.getElementById('lbox').style.opacity = 0;
+}
+function configureUser() {
+  // Open Lightbox
+  showLightbox();
+}
 
 
 // change Root Styling: document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');

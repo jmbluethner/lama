@@ -66,7 +66,9 @@
               <div class="loader"></div>
             </div>
             <script>showLoader()</script>
-            <div class="topbar_username"><?php print_r($_SESSION['username']); ?></div>
+            <a onclick="configureUser()">
+              <div class="topbar_username"><?php print_r($_SESSION['username']); ?></div>
+            </a>
             <button class="topbar_back" title="One step back" onclick="goBack(); isFrameLoading();">
               <i class="fas fa-chevron-left"></i>
             </button>
@@ -108,6 +110,21 @@
       </div>
     </section>
     <div class="alertcontainer" id="alertcontainer"></div>
+    <div class="lightbox" id="lbox">
+      <div class="lightbox_inner">
+        <a onclick="hideLightbox()"><i class="fas fa-window-close"></i></a>
+        <form method="POST" action="changeUserdata.php">
+          <h4>Change password</h4>
+          <input type="password" name="newPw" class="textinput" placeholder="Password"></input><br>
+          <input type="password" name="newPw" class="textinput" placeholder="Repeat Password"></input><br>
+          <button type="submit" class="buttonLarge">Set new password</button>
+          <h4>Change mail</h4>
+          <input type="mail" name="newPw" class="textinput" placeholder="Mail"></input><br>
+          <input type="mail" name="newPw" class="textinput" placeholder="Repeat Mail"></input><br>
+          <button type="submit" class="buttonLarge">Set new mail address</button>
+        </form>
+      </div>
+    </div>
     <?php
       // Changing the viewframe to the specified URL
       print_r("<script>switchViewID('".$_GET['viewframe']."')</script>")
