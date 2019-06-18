@@ -28,7 +28,7 @@ I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/
 Check him out too!  
 ## How does it look?  
 ![Screenshot4](https://i.imgur.com/kfplPAT.png)  
-![Screenshot3](https://i.imgur.com/cf5EM6C.jpg)  
+![Screenshot3](https://i.imgur.com/0Bmilmj.jpg)  
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
 ![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
 ## Featureeeees  
