@@ -108,7 +108,7 @@
               $result = $conn->query($sql);
               if ($result->num_rows == 0) {
                 // No root user found
-                $sql = "INSERT INTO users (username,password,role,mail) VALUES ('root','07dcab303c2a6f5c4b174194ec4bc30dcc9fe4c41bcbeeebea878267d6d2b43e273fd009dfda8c9a210a1993dd4f9865ab56d84b5edadf4eabf148742e049380','root','root@root.root')";
+                $sql = "INSERT INTO users (username,password,role,mail) VALUES ('root','69ac3e4378b921df85493a8ca63eec322b42b058112b8aa118e2e12ac1f6441926e77bd8d0dbb2d937c2764b4b5117425f6f24c9ed649200121860418ffebd27','root','root@root.root')";
                 if ($conn->query($sql) === TRUE) {
                   print_r('Created default user.<br>');
                 } else {
