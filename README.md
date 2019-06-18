@@ -103,10 +103,8 @@ Set your timezone in $root/config.php. All timezones here: https://www.php.net/m
 - Step 3  
 Set all other minor Variables, such as error reporting, in the log file.  
 - Step 4  
-Add a lama.log in the root path.  
-- Step 5  
 Go to $root/install in your webbrowser to start the automatic configuration process. IF any errors occur, they SHOULD be described well in order to tell you how to fix it. If you have any problems, feel free to contact me via the Mail which is given at the end of the readme.  
-- Step 6  
+- Step 5  
 Done! Have fun adding and managing Source-Based gameservers :)  
   
 ## Bugs, Issues, ...
