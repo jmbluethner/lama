@@ -816,6 +816,9 @@ select {
   float: left;
   flex-grow: 100;
 }
+.colorset_block {
+  cursor: pointer;
+}
 .rcon_badge {
   display: inline-block;
   margin-top: 2px;

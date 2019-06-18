@@ -1,5 +1,11 @@
 var paneheight;
 
+/*
+window.onload = function () {
+  setTheme(0,getCookieByName('--primary'),getCookieByName('--secondary'),getCookieByName('--tertiary'),getCookieByName('--active'),getCookieByName('--accent'),getCookieByName('--critical'),getCookieByName('--message'),getCookieByName('--warning'),getCookieByName('--text'),getCookieByName('--text-light'),getCookieByName('--textSecondary'),getCookieByName('--panes'),getCookieByName('--table-light'),getCookieByName('--table-dark'));
+}
+*/
+
 function goBack() {
   window.history.go(-1);
 }
