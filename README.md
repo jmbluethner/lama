@@ -101,7 +101,7 @@ config.php has to look like that:
 - Step 2  
 Set your timezone in $root/config.php. All timezones here: https://www.php.net/manual/de/timezones.php. This is  neccessary in order to get the correct time (for example in the log file).    
 - Step 3  
-Set all other minor Variables, such as error reporting, in the log file.  
+Set all other minor Variables, such as error reporting, in the config file.  
 - Step 4  
 Go to $root/install in your webbrowser to start the automatic configuration process. IF any errors occur, they SHOULD be described well in order to tell you how to fix it. If you have any problems, feel free to contact me via the Mail which is given at the end of the readme.  
 - Step 5  
