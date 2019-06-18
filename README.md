@@ -82,7 +82,7 @@ sudo apt-get install php7.3 php-pear
 ```sh
 php -v
 ```  
-### LAMA installation / configuration  
+#### LAMA installation / configuration  
 After you have installed everything you need on the Server, you can install and configure the Server Manager itself.  
 The Rootdirectory will be called "$root" in this guide.  
 - Step 1  
@@ -108,6 +108,8 @@ Set all other minor Variables, such as error reporting, in the config file.
 Go to $root/install in your webbrowser to start the automatic configuration process. IF any errors occur, they SHOULD be described well in order to tell you how to fix it. If you have any problems, feel free to contact me via the Mail which is given at the end of the readme.  
 - Step 5  
 Done! Have fun adding and managing Source-Based gameservers :)  
+If you have installed the Server manager for the first time, the default root Login is: root@root.root / lamaManager!  
+IMPORTANT: Change the Root Login-Data ASAP. Otherwise everybody, who knows about this repo, can log in as root!
   
 ## Bugs, Issues, ...
 If you get any errors, which are definitely not caused by yourself, I'd love to get your error report.  
