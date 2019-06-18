@@ -199,11 +199,30 @@
             }
           }
 
-          print_r('<script>installDone()</script>');
-          print_r('All tasks are done! I will now close the Connection to the DB. You can go to the login page and log in.');
+          print_r('The last thing I have to do is to create the lama.log file<br>');
           ob_flush();
           flush();
-          sleep(5);
+          sleep(1);
+
+          // Check if log file already exists. If not - create
+          $filename = '../lama.log';
+          if(!file_exists($filename)) {
+            $config = include('../config.php');
+            date_default_timezone_set($config['timezone']);
+            $time = date("Y-m-d H:i:s");
+            $handle = fopen($filename, 'w') or die('Cannot open the file!<br><script>installFailed()</script>');
+            fclose($handle);
+            $content = '['.$time.'] log file created from /install, executed by IP: '.$_SERVER["REMOTE_ADDR"].PHP_EOL;
+            file_put_contents($filename,$content);
+            print_r('Log file successfully created!<br>');
+          } else {
+            print_r('Log file already exists. Skipping.<br>');
+          }
+
+          print_r('<script>installDone()</script>');
+          print_r('All tasks are done! I will now close the Connection to the DB. You can go to the login page and log in.<br><b>Have fun managing your servers! GL & HF</b>');
+          ob_flush();
+          flush();
           $conn->close();
           ob_end_flush();
         ?>
