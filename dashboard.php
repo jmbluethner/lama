@@ -82,10 +82,13 @@
                 $plugins = array_diff($plugins, array('.', '..'));
                 foreach ($plugins as $pluginSelected) {
                   if(!is_dir($pluginSelected)) {
-                    if (strpos($pluginSelected, '.php') !== false) {
-                      $pluginOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected);
-                      $pluginSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected));
-                      print_r("<button onclick='switchView(this); isFrameLoading(); tintPlugin(this.id)' class='sidebar_plugin' id='".$pluginOriginal."'>".$pluginSelected."</button>");
+                    // Check if plugin should be hidden
+                    if($pluginSelected[0] != '.') {
+                      if (strpos($pluginSelected, '.php') !== false) {
+                        $pluginOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected);
+                        $pluginSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $pluginSelected));
+                        print_r("<button onclick='switchView(this); isFrameLoading(); tintPlugin(this.id)' class='sidebar_plugin' id='".$pluginOriginal."'>".$pluginSelected."</button>");
+                      }
                     }
                   }
                 }
