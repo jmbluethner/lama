@@ -72,7 +72,7 @@
             $server['playersmax'] = ord(substr($inner, 3, 1));
         ?>
         <tr>
-          <td><?php print_r($server['name']); ?></td>
+          <td style="width: 40%;"><?php print_r($server['name']); ?></td>
           <td><?php print_r($server['players']." / ".$server['playersmax']); ?></td>
           <td><?php print_r($server['game']); ?></td>
           <td><?php print_r($server['map']); ?></td>

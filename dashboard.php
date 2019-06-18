@@ -115,12 +115,12 @@
         <a onclick="hideLightbox()"><i class="fas fa-window-close"></i></a>
         <form method="POST" action="changeUserdata.php">
           <h4>Change password</h4>
-          <input type="password" name="newPw" class="textinput" placeholder="Password"></input><br>
-          <input type="password" name="newPw" class="textinput" placeholder="Repeat Password"></input><br>
+          <input autocomplete="off" type="password" name="newPw" class="textinput" placeholder="Password"></input><br>
+          <input autocomplete="off" type="password" name="newPwConfirm" class="textinput" placeholder="Repeat Password"></input><br>
           <button type="submit" class="buttonLarge">Set new password</button>
           <h4>Change mail</h4>
-          <input type="mail" name="newPw" class="textinput" placeholder="Mail"></input><br>
-          <input type="mail" name="newPw" class="textinput" placeholder="Repeat Mail"></input><br>
+          <input autocomplete="off" type="email" name="newMail" class="textinput" placeholder="Mail"></input><br>
+          <input autocomplete="off" type="email" name="newMailConfirm" class="textinput" placeholder="Repeat Mail"></input><br>
           <button type="submit" class="buttonLarge">Set new mail address</button>
         </form>
       </div>
