@@ -68,6 +68,12 @@ h1 {
   font-size: 30px;
   margin-top: -8px;
 }
+#hook {
+  display: none;
+  color: white;
+  font-size: 30px;
+  margin-top: -8px;
+}
 @keyframes gear1 {
   0%   {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}

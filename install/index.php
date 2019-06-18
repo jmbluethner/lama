@@ -35,11 +35,18 @@
         document.getElementById("gear2").style.display = "none";
         document.getElementById("triangle").style.display = "block";
       }
+      function installDone() {
+        document.getElementById("headbar").style.backgroundColor = "rgb(0,200,0)";
+        document.getElementById("gear1").style.display = "none";
+        document.getElementById("gear2").style.display = "none";
+        document.getElementById("hook").style.display = "block";
+      }
     </script>
     <div class="box">
       <div class="box_head" id="headbar">
         <h1>Installation</h1>
         <div class="gears">
+          <i id="hook" class="fas fa-check"></i>
           <i class="fas fa-exclamation-triangle" id="triangle"></i>
           <i id="gear1" class="fas fa-cog"></i>
           <i id="gear2" class="fas fa-cog"></i>
@@ -75,6 +82,9 @@
           ob_flush();
           flush();
           sleep(1);
+
+          // Set up a table
+
           print_r('The first table to set up is <i>users</i><br>');
           ob_flush();
           flush();
@@ -93,6 +103,21 @@
             )";
 
             if ($conn->query($sql) === TRUE) {
+              // Check if default user already exists. If not - create!
+              $sql = "SELECT username FROM users WHERE username='root'";
+              $result = $conn->query($sql);
+              if ($result->num_rows == 0) {
+                // No root user found
+                $sql = "INSERT INTO users (username,password,role,mail) VALUES ('root','07dcab303c2a6f5c4b174194ec4bc30dcc9fe4c41bcbeeebea878267d6d2b43e273fd009dfda8c9a210a1993dd4f9865ab56d84b5edadf4eabf148742e049380','root','root@root.root')";
+                if ($conn->query($sql) === TRUE) {
+                  print_r('Created default user.<br>');
+                } else {
+                  print_r('<script>installFailed()</script>');
+                  die("Error creating default user: " . $conn->error);
+                }
+              } else {
+                print_r('The default user already exists. Skipped.<br>');
+              }
               echo "Table <i>users</i> created successfully<br>";
             } else {
               print_r('<script>installFailed()</script>');
@@ -100,16 +125,87 @@
             }
           }
 
-          // Here we need to generate all other tables. The System from above works fine.
+          // Set up a table
 
-          print_r('All tasks are done! I will now close the Connection and link you to the login.');
+          print_r('Now I set up <i>themes</i><br>');
+          ob_flush();
+          flush();
+
+          $val = $conn->query('select 1 from `themes` LIMIT 1');
+
+          if($val !== FALSE) {
+             print_r('<i>themes</i> already exists. Skipping.<br>');
+          } else {
+            $sql = "CREATE TABLE themes (
+              themename TINYTEXT,
+              primaryColor TINYTEXT,
+              secondary TINYTEXT,
+              tertiary TINYTEXT,
+              active TINYTEXT,
+              accent TINYTEXT,
+              critical TINYTEXT,
+              message TINYTEXT,
+              warning TINYTEXT,
+              text TINYTEXT,
+              text_light TINYTEXT,
+              textSecondary TINYTEXT,
+              panes TINYTEXT,
+              table_light TINYTEXT,
+              table_dark TINYTEXT
+            )";
+
+            if ($conn->query($sql) === TRUE) {
+              print_r('I will now insert the default values into <i>themes</i> ...<br>');
+              ob_flush();
+              flush();
+              $sql = "INSERT INTO themes (themename,primaryColor,secondary,tertiary,active,accent,critical,message,warning,text,text_light,textSecondary,panes,table_light,table_dark) VALUES ('Futuretech','#E8EBEE','#2B333E','#333D4A','#151515','#00B2FF','rgb(190, 0, 0)','#00B2FF','rgb(250, 165, 0)','#000000','#5E5E5E','#ffffff','#ffffff','#F2F2F2','#EAEAEA')";
+              if ($conn->query($sql) === TRUE) {
+                echo "Table <i>themes</i> created successfully<br>";
+              } else {
+                print_r('<script>installFailed()</script>');
+                die("Error creating table: " . $conn->error);
+              }
+            } else {
+              print_r('<script>installFailed()</script>');
+              die("Error creating table: " . $conn->error);
+            }
+          }
+
+          // Set up a table
+
+          print_r('Now I set up <i>gameservers</i><br>');
+          ob_flush();
+          flush();
+
+          $val = $conn->query('select 1 from `gameservers` LIMIT 1');
+
+          if($val !== FALSE) {
+             print_r('<i>gameservers</i> already exists. Skipping.<br>');
+          } else {
+            $sql = "CREATE TABLE gameservers (
+              ip TEXT,
+              port int(11),
+              rconpw TEXT,
+              mail LONGTEXT,
+              id int(5) AUTO_INCREMENT,
+              PRIMARY KEY (id)
+            )";
+
+            if ($conn->query($sql) === TRUE) {
+              echo "Table <i>gameservers</i> created successfully<br>";
+            } else {
+              print_r('<script>installFailed()</script>');
+              die("Error creating table: " . $conn->error);
+            }
+          }
+
+          print_r('<script>installDone()</script>');
+          print_r('All tasks are done! I will now close the Connection to the DB. You can go to the login page and log in.');
           ob_flush();
           flush();
           sleep(5);
           $conn->close();
           ob_end_flush();
-          header("Location: ../index.php");
-          die();
         ?>
       </div>
     </div>
