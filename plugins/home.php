@@ -116,6 +116,39 @@
       </table>
     </div>
     -->
+    <div class="pane" id="pane_changelog">
+      <h3>Changelog</h3>
+      <button class="pane_collapse" onclick="collapsePane('pane_changelog')">
+        <i class="fas fa-chevron-up" id="pane_changelog_chevron"></i>
+      </button>
+      <div style="height: 35px; width: 1px;"></div>
+      <div data-markdown id="md_container">
+        <?php
+          $md = file_get_contents('../CHANGELOG.md');
+          print_r($md);
+        ?>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
     <script src="../assets/js/functions.js"></script>
+    <script>
+      window.onload=function(){
+        // this function is the reverse version of escapeHTML found at
+        // https://github.com/evilstreak/markdown-js/blob/master/src/render_tree.js
+        function unescapeHTML( text ) {
+            return text.replace( /&amp;/g, "&" )
+                       .replace( /&lt;/g, "<" )
+                       .replace( /&gt;/g, ">" )
+                       .replace( /&quot;/g, "\"" )
+                       .replace( /&#39;/g, "'" );
+          }
+        // based on https://gist.github.com/paulirish/1343518
+        (function(){
+          [].forEach.call( document.querySelectorAll('[data-markdown]'), function fn(elem){
+            elem.innerHTML = (new Showdown.converter()).makeHtml(unescapeHTML(elem.innerHTML));
+          });
+        }());
+      }
+    </script>
   </body>
 </html>

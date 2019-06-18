@@ -847,6 +847,11 @@ select {
 #pane_ServerDetail_template {
   display: none;
 }
+#md_container {
+  display: block;
+  width: 100%;
+  font-family: 'Segoe UI';
+}
 
 @media screen and (max-width: 700px) {
   .sidebar_container {
