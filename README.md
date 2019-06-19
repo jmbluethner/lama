@@ -10,6 +10,8 @@ This repo is a new approach to one of my older projects called "rushB", which go
 
 !!! This project is NOT working currently! Everything is WIP !!!  
 
+Get the full Manual / Documentation [here](https://github.com/nighttimedev/manual-lama)  
+
 ![Badge_License](https://img.shields.io/github/license/nighttimedev/lama.svg)
 ![Badege_Size](https://img.shields.io/github/repo-size/nighttimedev/lama.svg)
 ![Badge_Language](https://img.shields.io/github/languages/top/nighttimedev/lama.svg)
