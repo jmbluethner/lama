@@ -156,18 +156,62 @@
           </select>
         </div>
       </div>
+      <!--
       <div class="occupy">
         <div class="flexwrap_line half manageline">
           <div class="description">
             Change Map
           </div>
-          <input type="text" class="textinput select_line" placeholder="eg. de_dust2"></input>
+          <form method="GET" action="../assets/php/rcon.php">
+            <input type="text" name="servercommand" class="textinput select_line" placeholder="eg. de_dust2"></input>
+            <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+            <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+            <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+          </form>
         </div>
       </div>
-      <br><br><br>
+      -->
+      <br><br>
+      <form method="GET" action="../assets/php/rcon.php">
+        <button type="submit" class="buttonLarge">Pause Match</button>
+        <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+        <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+        <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+        <input type="hidden" name="servercommand" value="mp_pause_match"></input>
+      </form>
+      <form method="GET" action="../assets/php/rcon.php">
+        <button type="submit" class="buttonLarge">Unpause Match</button>
+        <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+        <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+        <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+        <input type="hidden" name="servercommand" value="mp_unpause_match"></input>
+      </form>
+      <form method="GET" action="../assets/php/rcon.php">
+        <button type="submit" class="buttonLarge">Start Warmup</button>
+        <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+        <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+        <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+        <input type="hidden" name="servercommand" value="mp_warmup_start"></input>
+      </form>
+      <form method="GET" action="../assets/php/rcon.php">
+        <button type="submit" class="buttonLarge">End Warmup</button>
+        <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+        <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+        <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+        <input type="hidden" name="servercommand" value="mp_warmup_end"></input>
+      </form>
+      <!-- Implement! -->
+      <button class="buttonLarge">Kick all Players</button>
+      <br><br>
       <h4 style="margin-top: 35px;">LAMA Gameserver Console</h4>
       <div class="serverconsole">
-        <span>LGC :></span><form><input type="text"></input></form>
+        <span>LGC :></span>
+        <form method="GET" action="../assets/php/rcon.php">
+          <input type="text" name="servercommand"></input>
+          <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+          <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+          <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+        </form>
       </div>
       <form method="get" action="servers.php">
         <input type="hidden" name="ipToRemove" value="<?php print_r($serverip) ?>" />
