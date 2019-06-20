@@ -8,7 +8,7 @@
 	Header( 'X-Content-Type-Options: nosniff' );
 
 	// Edit this ->
-	define( 'SQ_SERVER_ADDR', '216.52.148.47' );
+	define( 'SQ_SERVER_ADDR', '192.168.122.132' );
 	define( 'SQ_SERVER_PORT', 27015 );
 	define( 'SQ_TIMEOUT',     1 );
 	define( 'SQ_ENGINE',      SourceQuery::SOURCE );

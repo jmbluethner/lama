@@ -5,8 +5,8 @@
 	use xPaw\SourceQuery\SourceQuery;
 
 	// Edit this ->
-	define( 'SQ_SERVER_ADDR', $_GET['ip'] );
-	define( 'SQ_SERVER_PORT', $_GET['port'] );
+	define( 'SQ_SERVER_ADDR', '192.168.122.132' );
+	define( 'SQ_SERVER_PORT', '27015' );
 	define( 'SQ_TIMEOUT',     1 );
 	define( 'SQ_ENGINE',      SourceQuery::SOURCE );
 	// Edit this <-
