@@ -147,12 +147,24 @@
             Exec Config
           </div>
           <select class="select_line">
-            <option></option>
-            <!-- Hier kommt ein Loop hin, der alle .cfgs auf dem Server getted -->
-            <!-- Lösung via page auf zielserver + curl von manage Server -->
-            <option>server.cfg</option>
-            <option>matchmaking.cfg</option>
-            <option>kniferound.cfg</option>
+            <?php
+              $configs = scandir('../assets/serverconfigs/');
+              $configs = array_diff($configs, array('.', '..'));
+              foreach ($configs as $configSelected) {
+                if(!is_dir($configSelected)) {
+                  // Check if plugin should be hidden
+                  if($configSelected[0] != '.') {
+                    if (strpos($configSelected, '.cfg') !== false) {
+                      $configOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $configSelected);
+                      $configSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $configSelected));
+                      $configSelectedQuote = '"'.$configSelected.'"';
+
+                      print_r("<option>".$configSelected."</option>");
+                    }
+                  }
+                }
+              }
+            ?>
           </select>
         </div>
       </div>
