@@ -146,26 +146,29 @@
           <div class="description">
             Exec Config
           </div>
-          <select class="select_line">
-            <?php
-              $configs = scandir('../assets/serverconfigs/');
-              $configs = array_diff($configs, array('.', '..'));
-              foreach ($configs as $configSelected) {
-                if(!is_dir($configSelected)) {
-                  // Check if plugin should be hidden
-                  if($configSelected[0] != '.') {
-                    if (strpos($configSelected, '.cfg') !== false) {
-                      $configOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $configSelected);
-                      $configSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $configSelected));
-                      $configSelectedQuote = '"'.$configSelected.'"';
+          <form action="./support/multircon.php" method="POST" style="flex-grow: 100; display: flex;">
+            <select class="select_line" name="confSelect">
+              <?php
+                $configs = scandir('../assets/serverconfigs/');
+                $configs = array_diff($configs, array('.', '..'));
+                foreach ($configs as $configSelected) {
+                  if(!is_dir($configSelected)) {
+                    // Check if plugin should be hidden
+                    if($configSelected[0] != '.') {
+                      if (strpos($configSelected, '.cfg') !== false) {
+                        $configOriginal = preg_replace('/\\.[^.\\s]{3,4}$/', '', $configSelected);
+                        $configSelected = ucfirst(preg_replace('/\\.[^.\\s]{3,4}$/', '', $configSelected));
+                        $configSelectedQuote = '"'.$configSelected.'"';
 
-                      print_r("<option>".$configSelected."</option>");
+                        print_r("<option>".$configSelected."</option>");
+                      }
                     }
                   }
                 }
-              }
-            ?>
-          </select>
+              ?>
+            </select>
+            <button type="submit" style="margin-left: 10px; height: 36px;" class="button_simple">Exec!</button>
+          </form>
         </div>
       </div>
       <!--
