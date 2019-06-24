@@ -2,7 +2,10 @@
 # Release 0.4
 <hr>
 ### Features  
-- Added changelog view on /plugins/home
+- Added changelog view on /plugins/home  
+- Added /plugins/configs  
+- Made /plugins/configs fully working
+- **Made /plugins/servers working with RCON ^.^**
 ### Fixes
 <br>
 # Release 0.3

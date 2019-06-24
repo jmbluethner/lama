@@ -15,6 +15,10 @@
   --table-dark: #EAEAEA;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -388,6 +392,10 @@ h4 {
 .table_condensed tr:first-of-type {
   background: transparent;
   height: 30px;
+}
+.table_condensed_reg tr:first-of-type {
+  background-color: var(--table-dark) !important;
+  height: 40px !important;
 }
 
 .table_condensed tr th {
@@ -886,6 +894,10 @@ select {
   top: 10px;
   right: 10px;
 }
+.multiform {
+  float: left;
+  padding: 10px;
+}
 #loadingstatus {
   color: var(--text);
   font-family: 'Consolas', monospace;
@@ -900,7 +912,32 @@ select {
   width: 100%;
   font-family: 'Segoe UI';
 }
-
+[id^="configIDE"] {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  margin-top: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  font-family: 'Consolas',monospace;
+  /*
+    PRE-WRAP is needed to use TAB in the editor boxes
+    Currently not available caus it's not working like it should
+  */
+  /* white-space: pre-wrap; */
+  tab-size: 3;
+  color: var(--text);
+}
+td button {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+.statement {
+    color: orange;
+}
 @media screen and (max-width: 700px) {
   .sidebar_container {
     width: 150px;
