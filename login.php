@@ -82,6 +82,17 @@
           print_r("<script>spawnAlert('error','SQL not connected!'); console.log('SQL Connection lost');</script>");
         }
       }
+
+      $config = include('config.php');
+      $SQLhost = $config['SQLhost'];
+      $SQLdbname = $config['SQLdbname'];
+      $SQLuser = $config['SQLuser'];
+      $SQLpass = $config['SQLpass'];
+
+      if($SQLhost == '' || $SQLdbname == '' || $SQLuser=='') {
+        header('Location: ./error.php?title=SQL%20Issue&content=No%20database%20specified%20in%20config%20file');
+      }
+
     ?>
   </body>
 </html>
