@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(170, 170, 170);
+}
+h1 {
+  color: white;
+  font-family: 'Arial',sans-serif;
+  font-size: 28px;
+  padding: 0;
+  margin: 0;
+  display: block;
+  float: left;
+  flex-grow: 100;
+}
+.box {
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  width: 600px;
+  max-width: 100%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+}
+[class^='box_'] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.box_head {
+  height: 40px;
+  background-color: rgb(190,0,0);
+  box-sizing: border-box;
+  padding-top: 14px;
+  display: flex;
+}
+.box_content {
+  min-height: 100px;
+  background-color: white;
+  font-family: 'Consolas', monospace;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.fa-cog {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  margin-top: -8px;
+  animation-name: gear1;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#triangle {
+  display: block;
+  color: white;
+  font-size: 30px;
+  margin-top: -8px;
+}
+#hook {
+  display: none;
+  color: white;
+  font-size: 30px;
+  margin-top: -8px;
+}
