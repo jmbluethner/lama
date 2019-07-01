@@ -101,7 +101,47 @@
         }
       ?>
 
-      <div class="mapimage"></div>
+      <div class="mapimage" id="mp<?php print_r($lpc); ?>">Map Image not available</div>
+      <script type="text/javascript">
+        var el = document.getElementById("mp<?php print_r($lpc); ?>");
+        <?php
+          $mapimage = $config['imageDB'].$server['map'].".jpg";
+        ?>
+
+        <?php
+          // Check if Map-Image exists on Server. If it doesn't exist, don't apply the background-image
+
+          $url = $mapimage;
+          $curl = curl_init($url);
+          curl_setopt($curl, CURLOPT_NOBODY, true);
+          $result = curl_exec($curl);
+          if ($result !== false) {
+            $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+            if ($statusCode == 404) {
+            // dead
+
+            } else {
+            // alive
+              ?>
+              el.style.backgroundImage = "url('<?php print_r($mapimage); ?>')";
+              <?php
+            }
+          }
+          else {
+            // dead
+
+          }
+        ?>
+
+        // HERE
+        var currentBg = document.getElementById('mp<?php print_r($lpc); ?>').style.backgroundImage;
+
+        if(document.getElementById('mp<?php print_r($lpc); ?>').style.backgroundImage.length != 0) {
+          el.textContent = "";
+        } else {
+          el.textContent = "Map Image not available";
+        }
+      </script>
       <div class="servertiles_wrapper flexwrap_line_wrap">
         <div class="servertile_border">
           <div class="servertile">

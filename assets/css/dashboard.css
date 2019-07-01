@@ -248,6 +248,7 @@ section {
 
 .sidebar_plugincontainer {
   flex-grow: 100;
+  overflow-y: auto;
 }
 
 .sidebar_logout {
@@ -261,6 +262,19 @@ section {
   font-family: 'Montserrat', sans-serif;
   transition: .2s ease;
   position: relative;
+}
+.manual {
+  width: 100%;
+  height: 50px;
+  background-color: var(--secondary);
+  color: var(--textSecondary);
+  text-align: center;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 100%;
 }
 
 .fa-door-open {
@@ -692,9 +706,15 @@ select {
   background-repeat: no-repeat;
   background-color: var(--secondary);
   position: relative;
+  text-align: center;
+  line-height: 150px;
+  color: var(--textSecondary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
 }
 .mapimage::before {
-  position: absolute;
+  /* position: absolute;
   content: 'Map images will get implemented soon ...';
   display: block;
   color: var(--textSecondary);
@@ -704,7 +724,10 @@ select {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 15px;
-  text-align: center;
+  text-align: center; */
+}
+[id^='mp'] {
+  background-image: url('');
 }
 
 .servertiles_wrapper {
@@ -786,6 +809,9 @@ select {
   background-color: inherit;
   top: 0;
   border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 8px;
 }
 .serverconsole form {
   border: none;
