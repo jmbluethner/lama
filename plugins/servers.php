@@ -101,7 +101,16 @@
         }
       ?>
 
-      <div class="mapimage"></div>
+      <div class="mapimage" id="mp<?php print_r($lpc); ?>">Map Image not available</div>
+      <script type="text/javascript">
+        var el = document.getElementById("mp<?php print_r($lpc); ?>");
+        el.style.backgroundImage = "url('https://cdn.nighttimedev.com/images/counterstrike/maps/"<?php print_r($server['map']); ?>".jpg')";
+        if(el.style.backgroundImage === "") {
+          el.innerHTML = "Map Image not available";
+        } else {
+          el.innerHTML = "";
+        }
+      </script>
       <div class="servertiles_wrapper flexwrap_line_wrap">
         <div class="servertile_border">
           <div class="servertile">

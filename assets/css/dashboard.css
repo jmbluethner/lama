@@ -692,9 +692,15 @@ select {
   background-repeat: no-repeat;
   background-color: var(--secondary);
   position: relative;
+  text-align: center;
+  line-height: 150px;
+  color: var(--textSecondary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
 }
 .mapimage::before {
-  position: absolute;
+  /* position: absolute;
   content: 'Map images will get implemented soon ...';
   display: block;
   color: var(--textSecondary);
@@ -704,7 +710,10 @@ select {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   font-size: 15px;
-  text-align: center;
+  text-align: center; */
+}
+[id^='mp'] {
+  background-image: url();
 }
 
 .servertiles_wrapper {

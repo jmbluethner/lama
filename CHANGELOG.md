@@ -5,7 +5,8 @@
 - Added changelog view on /plugins/home  
 - Added /plugins/configs  
 - Made /plugins/configs fully working
-- **Made /plugins/servers working with RCON ^.^**
+- **Made /plugins/servers working with RCON ^.^**  
+- Map Images are not implemented in /plugins/servers IF they are maintained in https://cdn.nighttimedev.com/images/counterstrike/maps/**MAPNAME**.jpg. Feature not available when LAMA is offline.
 ### Fixes
 <br>
 # Release 0.3
