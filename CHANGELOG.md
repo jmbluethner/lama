@@ -10,6 +10,7 @@
 - Plugin-Buttons on the left are now scrollable if not all can be displayed at once.
 - The Manual is linked above the "logout" Button
 ### Fixes
+- Fixed issue where webserver refuses to load showdown,js because the CDN was loaded with http instead of https
 <br>
 # Release 0.3
 <hr>
