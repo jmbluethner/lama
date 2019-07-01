@@ -96,6 +96,11 @@
                 }
               ?>
             </div>
+            <a href="https://github.com/nighttimedev/manual-lama/blob/master/LAMA_Manual_GER.md" target="_blank">
+              <button class="manual">
+                Read the Manual
+              </button>
+            </a>
             <form method="GET" action="signOut.php">
               <button type="submit" class="sidebar_logout">
                 <span>

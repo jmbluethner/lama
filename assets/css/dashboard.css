@@ -248,6 +248,7 @@ section {
 
 .sidebar_plugincontainer {
   flex-grow: 100;
+  overflow-y: auto;
 }
 
 .sidebar_logout {
@@ -261,6 +262,19 @@ section {
   font-family: 'Montserrat', sans-serif;
   transition: .2s ease;
   position: relative;
+}
+.manual {
+  width: 100%;
+  height: 50px;
+  background-color: var(--secondary);
+  color: var(--textSecondary);
+  text-align: center;
+  line-height: 50px;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 100%;
 }
 
 .fa-door-open {
