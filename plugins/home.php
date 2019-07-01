@@ -129,7 +129,7 @@
         ?>
       </div>
     </div>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
     <script src="../assets/js/functions.js"></script>
     <script>
       window.onload=function(){
