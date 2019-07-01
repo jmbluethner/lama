@@ -713,7 +713,7 @@ select {
   text-align: center; */
 }
 [id^='mp'] {
-  background-image: url();
+  background-image: url('');
 }
 
 .servertiles_wrapper {
