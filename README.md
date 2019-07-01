@@ -98,7 +98,8 @@ config.php has to look like that:
     'SQLuser' => '',
     'SQLpass' => '',
     'timezone' => 'Europe/Berlin',
-    'errorReporting' => 0
+    'errorReporting' => 0,
+    'imageDB' => 'https://cdn.nighttimedev.com/images/counterstrike/maps/'
   ];
 ?>
 ```
