@@ -809,6 +809,9 @@ select {
   background-color: inherit;
   top: 0;
   border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 8px;
 }
 .serverconsole form {
   border: none;
