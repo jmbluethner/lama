@@ -1,5 +1,5 @@
 
-# Release 0.4
+# Release 1.0 - OFFICIAL MAJOR RELEASE
 <hr>
 ### Features  
 - Added changelog view on /plugins/home  
