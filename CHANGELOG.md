@@ -1,5 +1,5 @@
 
-# Release 1.0 - OFFICIAL MAJOR RELEASE
+# Release 1.0 - MANHATTAN
 <hr>
 ### Features  
 - Added changelog view on /plugins/home  

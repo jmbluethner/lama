@@ -1,4 +1,11 @@
 <?php
+
+  session_start();
+  if($_SESSION['login'] != 'user') {
+    header('Location: ../../login.php');
+    die();
+  }
+
   $config = include('../../config.php');
   $SQLhost = $config['SQLhost'];
   $SQLdbname = $config['SQLdbname'];
@@ -21,4 +28,6 @@
     print_r('<div class="sbox_message"><span>LAMA Bot</span><br>A bit quit here huh?</div>');
   }
 ?>
-<input type="text" placeholder="Shout!" class="sbox_input"></input>
+<form method="POST" action="./plugins/support/addShout.php">
+  <input name="message" type="text" placeholder="Shout!" class="sbox_input"></input>
+</form>

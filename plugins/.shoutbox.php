@@ -15,12 +15,13 @@
     jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");
   });
 
-  $(function() {
+  jQuery(function() {
     sayHi();
 
     function catchMessages() {
        setTimeout(catchMessages,3000);
        jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");
+       alert('triggered');
     }
 });
 </script>
@@ -29,6 +30,6 @@
     Shoutbox
   </div>
   <div class="sbox_inner" id="sbox">
-    
+
   </div>
 </div>

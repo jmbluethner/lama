@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
   </head>
   <body class="framebody">
-    <h1>Home</h1>
+    <h1 ondblclick="window.location.href = 'https://de.wikipedia.org/wiki/Manhattan'" >Home</h1>
     <div class="pane">
       <h2>Welcome <?php print_r($_SESSION['username']) ?></h2>
     </div>
