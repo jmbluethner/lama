@@ -5,7 +5,7 @@
       sbox.style.overflow = 'hidden';
       sbox.style.height = '0px';
     } else {
-      sbox.style.overflow = 'scroll';
+      sbox.style.overflow = 'auto';
       sbox.style.height = '280px';
     }
   }
@@ -18,5 +18,6 @@
     <div class="sbox_message">
       <span>Username</span><br>Hey there!
     </div>
+    <input type="text" placeholder="Shout!" class="sbox_input"></input>
   </div>
 </div>

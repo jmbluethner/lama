@@ -957,6 +957,7 @@ select {
   padding-top: 0px;
   padding-bottom: 0px;
   transition: .4s ease;
+  position: relative;
 }
 .sbox_message {
   background-color: var(--accent);
@@ -976,6 +977,14 @@ select {
 .sbox_message span {
   color: var(--text-light);
   font-size: 11px;
+}
+.sbox_input {
+  width: 96%;
+  height: 25px;
+  position: absolute;
+  bottom: 5px;
+  left: 2%;
+  box-sizing: border-box;
 }
 #loadingstatus {
   color: var(--text);
