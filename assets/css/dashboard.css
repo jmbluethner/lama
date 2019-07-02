@@ -861,6 +861,8 @@ select {
   height: 100%;
   float: left;
   flex-grow: 100;
+  transform: skew(-25deg);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 .colorset_block {
   cursor: pointer;
