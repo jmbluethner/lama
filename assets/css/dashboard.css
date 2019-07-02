@@ -952,7 +952,11 @@ select {
   background-color: var(--primary);
   overflow: hidden;
   box-sizing: border-box;
+  height: 0px;
   padding: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  transition: .4s ease;
 }
 .sbox_message {
   background-color: var(--accent);
@@ -966,9 +970,12 @@ select {
   font-family: 'Arial',sans-serif;
   border-radius: 6px;
   line-height: 18px;
+  margin-top: 15px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 .sbox_message span {
   color: var(--text-light);
+  font-size: 11px;
 }
 #loadingstatus {
   color: var(--text);
