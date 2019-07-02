@@ -10,14 +10,25 @@
     }
   }
 </script>
+<script>
+  $(document).ready(function() {
+    jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");
+  });
+
+  $(function() {
+    sayHi();
+
+    function catchMessages() {
+       setTimeout(catchMessages,3000);
+       jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");
+    }
+});
+</script>
 <div class="sbox_wrapper">
   <div class="sbox_top" onclick="expandSbox()">
     Shoutbox
   </div>
   <div class="sbox_inner" id="sbox">
-    <div class="sbox_message">
-      <span>Username</span><br>Hey there!
-    </div>
-    <input type="text" placeholder="Shout!" class="sbox_input"></input>
+    
   </div>
 </div>

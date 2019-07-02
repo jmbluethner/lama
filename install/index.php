@@ -211,8 +211,9 @@
              print_r('<i>shoutbox</i> already exists. Skipping.<br>');
           } else {
             $sql = "CREATE TABLE shoutbox (
-              username TEXT,
-              message LONGTEXT
+              id int(11) not null AUTO_INCREMENT primary key,
+              username TEXT not null,
+              message TEXT not null
             )";
 
             if ($conn->query($sql) === TRUE) {
