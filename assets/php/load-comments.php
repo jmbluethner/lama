@@ -18,7 +18,7 @@
       die('<div class="sbox_message"><span>LAMA Bot</span><br>I could not connect to the Database. Sorry Mister :C</div>');
   }
 
-  $sql = "SELECT * FROM shoutbox LIMIT 10";
+  $sql = "SELECT * FROM shoutbox ORDER BY id DESC LIMIT 10";
   $result = $conn->query($sql);
   if($result->num_rows > 0) {
     while($row=$result->fetch_assoc()) {
