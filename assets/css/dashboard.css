@@ -924,6 +924,50 @@ select {
   float: left;
   padding: 10px;
 }
+.sbox_wrapper {
+  width: 250px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.75);
+}
+.sbox_top {
+  width: 100%;
+  height: 30px;
+  background-color: var(--secondary);
+  border-radius: 5px 5px 0px 0px;
+  color: var(--textSecondary);
+  font-family: 'Arial',sans-serif;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+.sbox_top:hover {
+  cursor: pointer;
+}
+.sbox_inner {
+  width: 100%;
+  background-color: var(--primary);
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.sbox_message {
+  background-color: var(--accent);
+  width: 100%;
+  padding: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  color: var(--textSecondary);
+  font-size: 12px;
+  font-family: 'Arial',sans-serif;
+  border-radius: 6px;
+  line-height: 18px;
+}
+.sbox_message span {
+  color: var(--text-light);
+}
 #loadingstatus {
   color: var(--text);
   font-family: 'Consolas', monospace;

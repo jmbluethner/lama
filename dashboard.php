@@ -2,7 +2,14 @@
 <html>
   <head>
     <?php
-      ini_set('display_errors', 1);
+      $config = include('config.php');
+      $dispErrors = $config['errorReporting'];
+      if($dispErrors == 1 || $dispErrors == 0) {
+
+      } else {
+        $dispErrors = 0;
+      }
+      ini_set('display_errors', $dispErrors);
 
       session_start();
       if($_SESSION['login'] != 'user') {
@@ -12,7 +19,6 @@
       if(!isset($_GET['viewframe'])) {
         $_GET['viewframe'] = 'home';
       }
-
     ?>
     <title>LAMA Server Manager</title>
     <meta charset="utf-8">
@@ -47,6 +53,7 @@
   </head>
   <body>
     <script src="./assets/js/functions.js"></script>
+    <?php include "./plugins/.shoutbox.php" ?>
     <section>
       <div class="topbar_container">
         <div class="topbar_wrapper">
