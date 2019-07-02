@@ -199,6 +199,30 @@
             }
           }
 
+          // Set up a table
+
+          print_r('Now I set up <i>Shoutbox</i><br>');
+          ob_flush();
+          flush();
+
+          $val = $conn->query('select 1 from `shoutbox` LIMIT 1');
+
+          if($val !== FALSE) {
+             print_r('<i>shoutbox</i> already exists. Skipping.<br>');
+          } else {
+            $sql = "CREATE TABLE shoutbox (
+              username TEXT,
+              message LONGTEXT
+            )";
+
+            if ($conn->query($sql) === TRUE) {
+              echo "Table <i>shoutbox</i> created successfully<br>";
+            } else {
+              print_r('<script>installFailed()</script>');
+              die("Error creating table: " . $conn->error);
+            }
+          }
+
           print_r('The last thing I have to do is to create the lama.log file<br>');
           ob_flush();
           flush();
