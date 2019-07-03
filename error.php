@@ -17,3 +17,7 @@
     </div>
   </body>
 </html>
+<?php
+  include "./assets/php/write-to-log.php";
+  writeToLog('./config.php','./lama.log','Error triggered: '.$_GET['title'].' / '.$_GET['content']);
+?>

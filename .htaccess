@@ -1,0 +1,23 @@
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Hide files of type .png, .zip, .jpg, .gif and .doc from listing
+IndexIgnore *.log
+
+# Deny access to files with extensions .ini, .psd, .log, .sh
+<FilesMatch "\.(log)$">
+Order allow,deny
+Deny from all
+
+</FilesMatch>
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+ErrorDocument 404 /errors/404.php

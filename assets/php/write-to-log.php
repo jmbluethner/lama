@@ -1,6 +1,7 @@
 <?php
   function writeToLog($configpath,$logpath,$content) {
-    include($configpath);
+    session_start();
+    $config = include($configpath);
     date_default_timezone_set($config['timezone']);
     $time = date("Y-m-d H:i:s");
     $userName = $_SESSION["username"];

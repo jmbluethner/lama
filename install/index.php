@@ -26,8 +26,6 @@
     <link rel="manifest" href="/manifest.json">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
-  </head>
-  <body>
     <script type="text/javascript">
       function installFailed() {
         document.getElementById("headbar").style.backgroundColor = "rgb(190,0,0)";
@@ -42,6 +40,12 @@
         document.getElementById("hook").style.display = "block";
       }
     </script>
+  </head>
+  <body>
+    <?php
+      include "../assets/php/write-to-log.php";
+      writeToLog('../config.php','../lama.log','Install triggered');
+    ?>
     <div class="box">
       <div class="box_head" id="headbar">
         <h1>Installation</h1>
