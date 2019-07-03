@@ -15,9 +15,9 @@ Deny from all
 </FilesMatch>
 
 # Deny access to filenames starting with dot(.)
-<FilesMatch "^\.">
-Order allow,deny
-Deny from all
-</FilesMatch>
+#<FilesMatch "^\.">
+#Order allow,deny
+#Deny from all
+#</FilesMatch>
 
 ErrorDocument 404 /errors/404.php
