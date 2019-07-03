@@ -15,15 +15,7 @@
     jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");
   });
 
-  jQuery(function() {
-    sayHi();
-
-    function catchMessages() {
-       setTimeout(catchMessages,3000);
-       jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");
-       alert('triggered');
-    }
-});
+  setInterval(function(){jQuery("#sbox").load("./assets/php/load-comments.php",{}).fadeIn("slow");},2000)
 </script>
 <div class="sbox_wrapper">
   <div class="sbox_top" onclick="expandSbox()">
