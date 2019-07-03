@@ -35,19 +35,11 @@
         $_SESSION['username'] = $row['username'];
 
         //////////////////////////
-        // Write to config
+        // Write to log
         //////////////////////////
-        date_default_timezone_set($config['timezone']);
-        $time = date("Y-m-d H:i:s");
-        $userName = $_SESSION["username"];
-        $clientIP = $_SERVER["REMOTE_ADDR"];
-        $file = 'lama.log';
-        // Öffnet die Datei, um den vorhandenen Inhalt zu laden
-        $current = file_get_contents($file);
-        // Fügt eine neue Person zur Datei hinzu
-        $current .= '['.$time.'] User '.$userName.' logged in. IP: '.$clientIP.PHP_EOL;
-        file_put_contents($file,$current);
 
+        include "./assets/php/write-to-log.php";
+        writeToLog('./config.php','./lama.log','User logged in');
 
         header("Location: dashboard.php");
         die();
@@ -56,16 +48,8 @@
         //////////////////////////
         // Write to config
         //////////////////////////
-        date_default_timezone_set($config['timezone']);
-        $time = date("Y-m-d H:i:s");
-        $userName = $_SESSION["username"];
-        $clientIP = $_SERVER["REMOTE_ADDR"];
-        $file = 'lama.log';
-        // Öffnet die Datei, um den vorhandenen Inhalt zu laden
-        $current = file_get_contents($file);
-        // Fügt eine neue Person zur Datei hinzu
-        $current .= '['.$time.'] Login to Mail: '.$mail.' failed. IP: '.$clientIP.PHP_EOL;
-        file_put_contents($file,$current);
+        include "./assets/php/write-to-log.php";
+        writeToLog('./config.php','./lama.log','Login FAILED!');
 
         $_SESSION['attempted'] = "y";
         header("Location: login.php");
