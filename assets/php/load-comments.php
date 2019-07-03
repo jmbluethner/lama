@@ -28,6 +28,3 @@
     print_r('<div class="sbox_message"><span>LAMA Bot</span><br>A bit quit here huh?</div>');
   }
 ?>
-<form method="POST" action="./plugins/support/addShout.php">
-  <input name="message" type="text" placeholder="Shout!" class="sbox_input"></input>
-</form>
