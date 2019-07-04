@@ -34,6 +34,7 @@ Check him out too!
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
 ![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
 ## Featureeeees  
+- Log file to give admins the ability to check out whats happening / who logged in
 - Shoutbox which enables Users a simple communication  
 - Installer to set up SQL completely automated  
 - Manage ALL Gameservers which are based on the source engine  
