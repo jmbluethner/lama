@@ -53,8 +53,8 @@
   </head>
   <body>
     <script src="./assets/js/functions.js"></script>
-    <!-- <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe> -->
-    <?php include "./plugins/.shoutbox.php" ?>
+    <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe>
+    <!-- ?php include "./plugins/.shoutbox.php" ? -->
     <section>
       <div class="topbar_container">
         <div class="topbar_wrapper">

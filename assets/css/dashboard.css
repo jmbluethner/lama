@@ -934,12 +934,16 @@ select {
   box-shadow: 2px 2px 4px rgba(0,0,0,0.75);
 }
 .frame_sbox {
-  width: 250px;
+  width: 280px;
   height: 300px;
   position: absolute;
   bottom: 0;
   right: 10%;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.75);
+  background: none;
+  padding: 0;
+  border: none;
+  box-shadow: none;
 }
 .sbox_top {
   width: 100%;
@@ -982,6 +986,7 @@ select {
   line-height: 18px;
   margin-top: 15px;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  word-break: break-word;
 }
 .sbox_message span {
   color: var(--text-light);
@@ -996,6 +1001,9 @@ select {
   bottom: 0;
   box-sizing: border-box;
   transition: .4s ease;
+}
+#sForm {
+  display: none;
 }
 #loadingstatus {
   color: var(--text);
