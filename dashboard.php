@@ -53,8 +53,19 @@
   </head>
   <body>
     <script src="./assets/js/functions.js"></script>
-    <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe>
+    <div class="sbox_container" id="sCont">
+      <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe>
+    </div>
     <!-- ?php include "./plugins/.shoutbox.php" ? -->
+    <?php include './assets/php/sessioncheck.php'; ?>
+    <script>
+      $(document).ready(function() {
+        jQuery("#dump").load("./assets/php/sessioncheck.php",{});
+      });
+
+      setInterval(function(){jQuery("#dump").load("./assets/php/sessioncheck.php",{})},2000)
+    </script>
+    <div id="dump"></div>
     <section>
       <div class="topbar_container">
         <div class="topbar_wrapper">
