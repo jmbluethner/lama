@@ -22,3 +22,6 @@ Deny from all
 
 ErrorDocument 404 /error.php?title=Code%20404&content=The%20page%20you%20are%20looking%20for%20does%20not%20exist!
 ErrorDocument 403 /error.php?title=Code%20403&content=You%20are%20not%20allowed%20to%20acces%20this%20file!
+ErrorDocument 500 /error.php?title=Code%20500&content=An%20internal%20Server%20Error%20has%20occured.%20The%20Admin%20was%20informed%20and%20we%20will%20work%20on%20it.
+ErrorDocument 400 /error.php?title=Code%20400&content=Your%20request%20could%20not%20be%20handled!
+ErrorDocument 503 /error.php?title=Code%20503&content=Service%20currently%20unavailable.
