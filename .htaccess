@@ -20,4 +20,5 @@ Deny from all
 #Deny from all
 #</FilesMatch>
 
-ErrorDocument 404 /errors/404.php
+ErrorDocument 404 ./error.php?title=Code%20404&content=The%20page%20you%20are%20looking%20for%20does%20not%20exist!
+ErrorDocument 403 ./error.php?title=Code%20403&content=You%20are%20not%20allowed%20to%20acces%20this%20file!
