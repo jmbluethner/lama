@@ -33,6 +33,7 @@
         $_SESSION['login'] = 'user';
         $_SESSION['usermail'] = $mail;
         $_SESSION['username'] = $row['username'];
+        $_SESSION['role'] = $row['role'];
 
         //////////////////////////
         // Write to log
