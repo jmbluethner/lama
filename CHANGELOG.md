@@ -11,7 +11,8 @@
 - The Manual is linked above the "logout" Button
 - Added Database-Supported Shoutbox
 - Added custom HTTP error-pages (LAMA must be installed in webroot)
-- Sessions now get checked by interval
+- Sessions now get checked by interval  
+- Root-Users can now add Users to the Database
 ### Fixes
 - Fixed issue where webserver refuses to load showdown,js because the CDN was loaded with http instead of https
 <br>
