@@ -51,6 +51,8 @@ Check him out too!
 |Game ID |Game                        |Query |RCON |Note |
 |--------|----------------------------|------|-----|-----|
 | -      | All HL1/HL2 games and mods | yes  | yes |     |
+| 10     | Counter-Strike 1.6         | yes  | yes |     |
+| 440    | Team Fortress 2            | yes  | yes |     |
 
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
