@@ -46,7 +46,14 @@ Check him out too!
 - Version-Managing and on the fly updating (Still in Development!)  
 - Inclusion of FontAwesome for an easy to use but yet beautiful UI  
 - Active Development  
-- Customizable UI / Themes
+- Customizable UI / Themes  
+
+|Game ID |Game                        |Query |RCON |Note |
+|--------|----------------------------|------|-----|-----|
+| -      | All HL1/HL2 games and mods | yes  | yes |     |
+| 10     | Counter-Strike 1.6         | yes  | yes |     |
+| 440    | Team Fortress 2            | yes  | yes |     |
+
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
@@ -101,7 +108,8 @@ config.php has to look like that:
     'SQLpass' => '',
     'timezone' => 'Europe/Berlin',
     'errorReporting' => 0,
-    'imageDB' => 'https://cdn.nighttimedev.com/images/counterstrike/maps/'
+    'imageDB' => 'https://cdn.nighttimedev.com/images/lama/maps/',
+    'serverping' => 0
   ];
 ?>
 ```
