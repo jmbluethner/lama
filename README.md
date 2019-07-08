@@ -47,6 +47,10 @@ Check him out too!
 - Inclusion of FontAwesome for an easy to use but yet beautiful UI  
 - Active Development  
 - Customizable UI / Themes
+|Game ID |Game                        |Query |RCON |Note |
+|--------|----------------------------|------|-----|-----|
+| -      | All HL1/HL2 games and mods | yes  | yes |     |
+
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
