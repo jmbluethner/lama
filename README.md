@@ -69,6 +69,10 @@ Check him out too!
 
 It is possible that even more games are supported. There are a lot more to test...  
 
+## How can I check rather a game is supported?  
+If the game is not listed above, it MIGHT be supported anyways.  
+Add your server to your favourites in Steam server browser, and if Steam can display information about your server, then the protocol is supported.
+
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
 Both systems use VMs, which are running on Debian 9, 64 bit with Apache2 and PHP 7.3.  
