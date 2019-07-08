@@ -285,18 +285,22 @@
       if(isset($_GET['addServer'])) {
         // Check if IP is pingable, than add to Database
         if($_GET['Sip'] != "" && $_GET['Sport'] != "") {
-          print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
 
-          set_time_limit(0);
-          $fp = fsockopen($_GET['Sip'], $_GET['Sport'], $errno, $errstr, 300);
-          if(! $fp)
-          {
-            print_r('<script>showStatus("Host not reachable! Check IP and Port. Than try again.")</script>');
-            die();
-          }
-          else
-          {
-            print_r('<script>showStatus("Host successfully pinged!")</script>');
+          $doPing = $config['serverping'];
+          if($doPing == 1) {
+            print_r('<script>showStatus("Checking if provided Host + Port is reachable...")</script>');
+
+            set_time_limit(0);
+            $fp = fsockopen($_GET['Sip'], $_GET['Sport'], $errno, $errstr, 300);
+            if(! $fp)
+            {
+              print_r('<script>showStatus("Host not reachable! Check IP and Port. Than try again.")</script>');
+              die();
+            }
+            else
+            {
+              print_r('<script>showStatus("Host successfully pinged!")</script>');
+            }
           }
 
           print_r('<script>showStatus("Adding Server to Database ...")</script>');
