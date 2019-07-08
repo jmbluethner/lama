@@ -4,7 +4,7 @@
 
 # LA.MA<img src="https://i.imgur.com/g3xXGSP.png" data-canonical-src="https://i.imgur.com/g3xXGSP.png" height="35" />  
 
-*A PHP based CSGO-Server management Interface for LAN Tournaments.*  
+*A PHP based Gameserver management Interface for LAN Tournaments.*  
 
 This repo is a new approach to one of my older projects called "rushB", which got deleted and is no longer available.   
 
@@ -48,11 +48,23 @@ Check him out too!
 - Active Development  
 - Customizable UI / Themes  
 
-|Game ID |Game                        |Query |RCON |Note |
-|--------|----------------------------|------|-----|-----|
-| -      | All HL1/HL2 games and mods | yes  | yes |     |
-| 10     | Counter-Strike 1.6         | yes  | yes |     |
-| 440    | Team Fortress 2            | yes  | yes |     |
+|Game ID |Game                              |Query |RCON |Note  |
+|--------|----------------------------------|------|-----|------|
+| -      | All HL1/HL2 games and mods       | yes  | yes |      |
+| -      | Minecraft                        | no   | yes |      |
+| 10     | Counter-Strike 1.6               | yes  | yes |      |
+| 440    | Team Fortress 2                  | yes  | yes |      |
+| 550    | Left 4 Dead 2                    | yes  | yes |      |
+| 730    | Counter-Strike: Global Offensive | yes  | yes | For full access: host_name_store 1; host_info_show 2; host_players_show 2 |
+| 4000   | Garry's Mod                      | yes  | yes |      |
+| 107410 | Arma 3                           | yes  | no  | +1 to the Port |
+| 115300 | CoD: MW 3                        | yes  | yes |      |
+| 211820 | Starbound                        | yes  | yes |      |
+| 244850 | Space Engeneers                  | yes  | no  | +1 to the Port |
+| 252490 | Rust                             | yes  | no  |      |
+| 282440 | Quake Live                       | yes  | no  |      |
+| 346110 | ARK: survival Evolved            | yes  | yes |      |
+
 
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
