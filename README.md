@@ -48,6 +48,8 @@ Check him out too!
 - Active Development  
 - Customizable UI / Themes  
 
+## Supported Games
+
 |Game ID |Game                              |Query |RCON |Note  |
 |--------|----------------------------------|------|-----|------|
 | -      | All HL1/HL2 games and mods       | yes  | yes |      |
@@ -63,8 +65,9 @@ Check him out too!
 | 244850 | Space Engeneers                  | yes  | no  | +1 to the Port |
 | 252490 | Rust                             | yes  | no  |      |
 | 282440 | Quake Live                       | yes  | no  |      |
-| 346110 | ARK: survival Evolved            | yes  | yes |      |
+| 346110 | ARK: survival Evolved            | yes  | yes |      |  
 
+It is possible that even more games are supported. There are a lot more to test...  
 
 ## Developing-Process
 All my test-runs, as well as troubleshooting, take(s) / took place on either my Laptop (Acer Predator Helios 300), or one of my Dell Poweredge R710's at home.  
