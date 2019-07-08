@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
     <script src="../assets/js/functions.js"></script>
   </head>
+  <?php
+    if(!$_SESSION['role'] == 'root') {
+      print_r("<br><span style='color: red; font-weight: bolder; font-size: 22px;'>This Feature is only available for root users!</span>");
+      exit();
+    }
+  ?>
   <body class="framebody">
 
     <h1>Users</h1>
