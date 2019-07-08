@@ -46,7 +46,8 @@ Check him out too!
 - Version-Managing and on the fly updating (Still in Development!)  
 - Inclusion of FontAwesome for an easy to use but yet beautiful UI  
 - Active Development  
-- Customizable UI / Themes
+- Customizable UI / Themes  
+
 |Game ID |Game                        |Query |RCON |Note |
 |--------|----------------------------|------|-----|-----|
 | -      | All HL1/HL2 games and mods | yes  | yes |     |
