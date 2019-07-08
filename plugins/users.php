@@ -75,10 +75,10 @@
       <div style="height: 35px; width: 1px;"></div>
       <form method="post" action="./support/addUser.php">
         <div class="flexwrap_line">
-          <input name="username" placeholder="Username" type="text" class="textinput split"></input>
-          <input name="role" placeholder="Role (root/user)" type="text" class="textinput split"></input>
-          <input name="password" placeholder="Password" type="text" class="textinput split"></input>
-          <input name="mail" placeholder="Mail" type="text" class="textinput split"></input>
+          <input autocomplete="off" name="username" placeholder="Username" type="text" class="textinput split"></input>
+          <input autocomplete="off" name="role" placeholder="Role (root/user)" type="text" class="textinput split"></input>
+          <input autocomplete="off" name="password" placeholder="Password" type="password" class="textinput split"></input>
+          <input autocomplete="off" name="mail" placeholder="Mail" type="email" class="textinput split"></input>
         </div>
         <button type="submit" name="addServer" class="buttonLarge">Add User to Database</button>
       </form>
