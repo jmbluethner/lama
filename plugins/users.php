@@ -73,7 +73,7 @@
         <i class="fas fa-chevron-up" id="pane_addUsers_chevron"></i>
       </button>
       <div style="height: 35px; width: 1px;"></div>
-      <form method="get" action="users.php">
+      <form method="post" action="./support/addUser.php">
         <div class="flexwrap_line">
           <input name="username" placeholder="Username" type="text" class="textinput split"></input>
           <input name="role" placeholder="Role (root/user)" type="text" class="textinput split"></input>
