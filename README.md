@@ -101,7 +101,7 @@ config.php has to look like that:
     'SQLpass' => '',
     'timezone' => 'Europe/Berlin',
     'errorReporting' => 0,
-    'imageDB' => 'https://cdn.nighttimedev.com/images/counterstrike/maps/',
+    'imageDB' => 'https://cdn.nighttimedev.com/images/lama/maps/',
     'serverping' => 0
   ];
 ?>
