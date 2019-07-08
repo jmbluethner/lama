@@ -18,15 +18,70 @@
 
     <h1>Users</h1>
     <span id="loadingstatus"></span>
+    <div class="pane" id="pane_showUsers">
+      <h3>All Users</h3>
+      <button class="pane_collapse" onclick="collapsePane('pane_showUsers')">
+        <i class="fas fa-chevron-up" id="pane_showUsers_chevron"></i>
+      </button>
+      <table class="table_condensed">
+        <tr>
+          <th>Username</th>
+          <th>Mail</th>
+          <th>Role</th>
+        </tr>
+        <?php
+          $config = include('../config.php');
+          $SQLhost = $config['SQLhost'];
+          $SQLdbname = $config['SQLdbname'];
+          $SQLuser = $config['SQLuser'];
+          $SQLpass = $config['SQLpass'];
 
+          $conn = new mysqli($SQLhost, $SQLuser, $SQLpass, $SQLdbname);
+
+          $sql = "SELECT * FROM users";
+          $result = $conn->query($sql);
+
+          $hits = $result->num_rows;
+
+          for($lpc=0;$lpc<$hits;$lpc++) {
+            $paneID = rand(0,99999999);
+
+            // Get all Server Data
+
+            $sql = "SELECT * FROM users LIMIT 1 OFFSET $lpc--";
+            $result = $conn->query($sql);
+
+            $row = $result->fetch_assoc();
+            $username = $row['username'];
+            $mail = $row['mail'];
+            $role = $row['role'];
+
+        ?>
+      <tr>
+        <td><?php print_r($username); ?></td>
+        <td><?php print_r($mail); ?></td>
+        <td><?php print_r($role); ?></td>
+      </tr>
+      <?php
+        }
+      ?>
+      </table>
+    </div>
     <div class="pane" id="pane_addUsers">
-      <h3>Manage Users</h3>
+      <h3>Add User</h3>
       <button class="pane_collapse" onclick="collapsePane('pane_addUsers')">
         <i class="fas fa-chevron-up" id="pane_addUsers_chevron"></i>
       </button>
       <div style="height: 35px; width: 1px;"></div>
-      <h4>Add User</h4>
-
+      <form method="get" action="users.php">
+        <div class="flexwrap_line">
+          <input name="username" placeholder="Username" type="text" class="textinput split"></input>
+          <input name="role" placeholder="Role (root/user)" type="text" class="textinput split"></input>
+          <input name="password" placeholder="Password" type="text" class="textinput split"></input>
+          <input name="mail" placeholder="Mail" type="text" class="textinput split"></input>
+        </div>
+        <button type="submit" name="addServer" class="buttonLarge">Add User to Database</button>
+      </form>
     </div>
   </body>
 </html>
