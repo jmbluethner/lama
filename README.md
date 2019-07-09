@@ -6,9 +6,7 @@
 
 *A PHP based Gameserver management Interface for LAN Tournaments.*  
 
-This repo is a new approach to one of my older projects called "rushB", which got deleted and is no longer available.   
-
-!!! This project is NOT working currently! Everything is WIP !!!  
+This repo is a new approach to one of my older projects called "rushB", which got deleted and is no longer available.    
 
 Get the full Manual / Documentation [here](https://github.com/nighttimedev/manual-lama)  
 
