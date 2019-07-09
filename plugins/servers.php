@@ -84,7 +84,7 @@
     ?>
 
     <div class="pane" id='pane_ServerDetail_<?php print_r($paneID) ?>'>
-      <h3><?php print_r($server['name']); ?></h3>
+      <h3><div class="badge_large"><?php echo $server['game'] ?></div><span><?php print_r($server['name']); ?></span></h3>
       <button class="pane_collapse" onclick="collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')">
         <i class="fas fa-chevron-up" id="pane_ServerDetail_<?php print_r($paneID) ?>_chevron"></i>
       </button>

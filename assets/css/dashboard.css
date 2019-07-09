@@ -1007,6 +1007,33 @@ select {
   box-sizing: border-box;
   transition: .4s ease;
 }
+.badge_large {
+  background-color: var(--accent);
+  height: 25px;
+  border-radius: 5px 2px 2px 5px;
+  font-family: 'Arial',sans-serif;
+  color: var(--textSecondary);
+  padding-left: 14px;
+  padding-right: 7px;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  line-height: 25px;
+  float: left;
+  margin-top: 3px;
+}
+.badge_large::after {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--panes);
+  float: left;
+  margin-left: -8px;
+  margin-top: 8px;
+  margin-right: 6px;
+}
 #sForm {
   display: none;
 }
