@@ -9,7 +9,7 @@
     <script src="../assets/js/functions.js"></script>
   </head>
   <?php
-    if(!$_SESSION['role'] == 'root') {
+    if($_SESSION['role'] != 'root') {
       print_r("<br><span style='color: red; font-weight: bolder; font-size: 22px;'>This Feature is only available for root users!</span>");
       exit();
     }
