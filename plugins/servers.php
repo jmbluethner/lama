@@ -31,6 +31,11 @@
     </div>
 
     <?php
+
+      require '../scq/SourceQuery/bootstrap.php';
+
+      use xPaw\SourceQuery\SourceQuery;
+
       error_reporting(E_ERROR | E_PARSE);
 
       $config = include('../config.php');
@@ -79,6 +84,17 @@
         $server['playersmax'] = ord(substr($inner, 3, 1));
         $server['password'] = ord(substr($inner, 7, 1));
         $server['vac'] = ord(substr($inner, 8, 1));
+
+        Header( 'X-Content-Type-Options: nosniff' );
+
+        // Edit this ->
+        define( 'SQ_SERVER_ADDR', $serverip );
+        define( 'SQ_SERVER_PORT', $serverport );
+        define( 'SQ_TIMEOUT',     1 );
+        define( 'SQ_ENGINE',      SourceQuery::SOURCE );
+        // Edit this <-
+
+        $Query = new SourceQuery( );
 
 
     ?>
@@ -272,8 +288,36 @@
         <input type="hidden" name="ipToRemove" value="<?php print_r($serverip) ?>" />
         <button type="submit" name="removeServer" class="button_warning">Remove Server from Database</button>
       </form>
+      <?php
+        $Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
+        $players = $Query->GetPlayers( );
+      ?>
+      <br>
+      <h4>Players</h4>
+      <table class="table_condensed">
+        <thead>
+          <tr>
+            <th><?php echo implode('</th><th>', array_keys(current($players))); ?></th>
+          </tr>
+        </thead>
+        <tbody>
+      <?php foreach ($players as $row): array_map('htmlentities', $row); ?>
+          <tr>
+            <td><?php echo implode('</td><td>', $row); ?></td>
+            <td>
+              <form method="GET" action="../assets/php/rcon.php">
+                <button type="submit" class="button_warning button_warning_small">BAN</button>
+                <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
+                <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
+                <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
+                <input type="hidden" name="servercommand" value="banid 0 <?php echo $row['Id'] ?> kick"></input>
+              </form>
+            </td>
+          </tr>
+      <?php endforeach; ?>
+        </tbody>
+      </table>
     </div>
-
 
     <?php
       }
