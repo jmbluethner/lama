@@ -106,7 +106,7 @@
       </button>
       <script>collapsePane('pane_ServerDetail_<?php print_r($paneID) ?>')</script>
       <div style="height: 35px; width: 1px;"></div>
-      <h4>Server: <?php print_r($serverip) ?> | <?php print_r($serverport) ?></h4>
+      <h4>Server: <?php print_r($serverip) ?> | <?php print_r($serverport) ?> - Description: <?php echo $server['description'] ?></h4>
 
       <!--
         This Element gets displayed below the IP when there is no RCON password supplied
