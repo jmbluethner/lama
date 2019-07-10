@@ -50,9 +50,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css" type="text/css">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <script src="./assets/js/push.js"></script>
+    <script src="./assets/js/functions.js"></script>
+    <script>
+      Push.create('Logged in',{
+        body: 'Hey <?php echo $_SESSION['username'] ?>! \u270C',
+        icon: 'favicon.ico',
+        timeout: 5000,
+        onClick: function () {
+          window.focus();
+          this.close();
+        }
+      });
+    </script>
   </head>
   <body>
-    <script src="./assets/js/functions.js"></script>
     <div class="sbox_container" id="sCont">
       <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe>
     </div>
