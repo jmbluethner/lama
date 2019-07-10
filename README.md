@@ -27,10 +27,12 @@ I can't fix major Bugs if they come from xPaw's Query. But so far I haven't seen
 I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/PHP-Source-Query  
 Check him out too!  
 ## How does it look?  
-![Screenshot4](https://i.imgur.com/kfplPAT.png)  
-![Screenshot3](https://i.imgur.com/0Bmilmj.jpg)  
-![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
-![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
+![Screenshot1](https://i.imgur.com/kfplPAT.png)  
+![Screenshot2](https://i.imgur.com/0Bmilmj.jpg)  
+![Screenshot3](https://cdn.nighttimedev.com/images/lama/lama_new_2.PNG)  
+![Screenshot4](https://cdn.nighttimedev.com/images/lama/lama_new.PNG)  
+![Screenshot5](https://cdn.nighttimedev.com/images/lama/lama_new_3.PNG)  
+![Screenshot6](https://cdn.nighttimedev.com/images/lama/lama_new_4.PNG)
 ## Featureeeees  
 - Log file to give admins the ability to check out whats happening / who logged in
 - Shoutbox which enables Users a simple communication  
