@@ -23,11 +23,12 @@
       <button class="pane_collapse" onclick="collapsePane('pane_showUsers')">
         <i class="fas fa-chevron-up" id="pane_showUsers_chevron"></i>
       </button>
-      <table class="table_condensed">
+      <table class="table_condensed table_lastnarrow">
         <tr>
           <th>Username</th>
           <th>Mail</th>
           <th>Role</th>
+          <th></th>
         </tr>
         <?php
           $config = include('../config.php');
@@ -61,6 +62,7 @@
         <td><?php print_r($username); ?></td>
         <td><?php print_r($mail); ?></td>
         <td><?php print_r($role); ?></td>
+        <td><form method="post" action="./support/deleteUser.php"><button class="button_warning_small" name="mail" value="<?php echo $mail ?>" type="submit">Delete User</button></form></td>
       </tr>
       <?php
         }
