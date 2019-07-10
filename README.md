@@ -30,7 +30,7 @@ Check him out too!
 ![Screenshot4](https://i.imgur.com/kfplPAT.png)  
 ![Screenshot3](https://i.imgur.com/0Bmilmj.jpg)  
 ![Screenshot1](https://cdn.nighttimedev.com/images/lama/lama1.png)  
-![Screenshot2](https://i.imgur.com/uEDBh6Q.png)  
+![Screenshot2](https://cdn.nighttimedev.com/images/lama/lama_new.png)  
 ## Featureeeees  
 - Log file to give admins the ability to check out whats happening / who logged in
 - Shoutbox which enables Users a simple communication  
