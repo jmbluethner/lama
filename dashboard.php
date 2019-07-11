@@ -54,6 +54,7 @@
     <script src="./assets/js/push.js"></script>
     <script src="./assets/js/functions.js"></script>
     <script>
+    /*
       Push.create('Logged in',{
         body: 'Hey <?php echo $_SESSION['username'] ?>! \u270C',
         icon: 'favicon.ico',
@@ -63,6 +64,7 @@
           this.close();
         }
       });
+    */
     </script>
   </head>
   <body>
