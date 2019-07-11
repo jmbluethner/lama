@@ -134,7 +134,15 @@
               </button>
             </a>
             <form method="GET" action="signOut.php">
-              <button type="submit" class="sidebar_logout">
+              <button type="submit" class="sidebar_logout" onclick="  Push.create('See you soon',{
+                  body: 'Bye <?php echo $_SESSION['username'] ?> :C',
+                  icon: 'favicon.ico',
+                  timeout: 5000,
+                  onClick: function () {
+                    window.focus();
+                    this.close();
+                  }
+                });">
                 <span>
                   Logout
                 </span>
