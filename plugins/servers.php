@@ -289,8 +289,26 @@
         <button type="submit" name="removeServer" class="button_warning">Remove Server from Database</button>
       </form>
       <?php
-        $Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
-        $players = $Query->GetPlayers( );
+        //$Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
+
+        //$players = $Query->GetPlayers( );
+
+
+        try
+      	{
+      		$Query->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
+
+      		$players = $Query->GetPlayers( );
+
+      	}
+      	catch( Exception $e )
+      	{
+      		echo $e->getMessage( );
+      	}
+      	finally
+      	{
+      		$Query->Disconnect( );
+      	}
       ?>
       <br>
       <h4>Players</h4>
