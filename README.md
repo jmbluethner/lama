@@ -19,13 +19,16 @@ Get the full Manual / Documentation [here](https://github.com/nighttimedev/manua
 ![Badge_Stars](https://img.shields.io/github/stars/nighttimedev/lama.svg?style=social)
 
 
+**First things first:** There are some poeple who helped me to develop this project.  
+Special Thanks to
+- https://github.com/jonaslagoni for explaning me his Repository https://github.com/jonaslagoni/csgoLiveServer  
+- https://github.com/xpaw I'm using his Repo https://github.com/xPaw/PHP-Source-Query to RCON / Query the Gameservers
+
 I've developed this to manage our CS:GO torunament @ DIE-LAN 2019. You can vsit us at https://die-lan.party  
 The whole Code is filled with comments from my side, so everyone can understand what was going on in my head. I think this makes my project suitable for education / learning processes.  
 Unfortunately, my SourcePawn knowledge is very limited. Thats also due to the lack of documentations about this language...  
 I can't fix major Bugs if they come from xPaw's Query. But so far I haven't seen any.  
-
-I've used xPaw's Source Server Query to make this work: https://github.com/xPaw/PHP-Source-Query  
-Check him out too!  
+ 
 ## How does it look?  
 ![Screenshot1](https://i.imgur.com/kfplPAT.png)  
 ![Screenshot2](https://i.imgur.com/0Bmilmj.jpg)  
