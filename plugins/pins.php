@@ -1,0 +1,1 @@
+<!-- This plugin allows you to set / delete / change pins for /out/simple-manage -->

@@ -15,5 +15,5 @@
 - Root-Users can now add Users to the Database
 - /plugins/servers now shows the Game (l4d,cs,...) as Tag in front of the Servername
 ### Fixes
-- Fixed issue where webserver refuses to load showdown,js because the CDN was loaded with http instead of https
+- Fixed issue where webserver refuses to load showdown.js because the CDN was loaded with http instead of https
 <br>
