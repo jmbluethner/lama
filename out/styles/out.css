@@ -1,0 +1,107 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+* {
+    outline: none;
+}
+.out_login_bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/server.jpg');
+    width: 100%;
+    height: 100vh;
+}
+.out_login_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 175, 0,0.5);
+}
+.out_login_toast {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(30,30,30);
+    border-radius: 5px;
+    padding: 5px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.out_login_toast form {
+    margin-top: 25px;
+}
+.out_login_overlay hr {
+    color: white;
+    border: none;
+    background-color: white;
+    width: 40%;
+    height: 1px;
+}
+input.serverpin {
+    width: 80%;
+    margin-left: 10%;
+    background-color: transparent;
+    background: none;
+    border: none;
+    color: white;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease;
+    height: 20px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+.serverpin:focus {
+    border-bottom: 1px solid white;
+}
+.submit {
+    width: 80%;
+    margin-left: 10%;
+    background-color: transparent;
+    background: none;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 15px;
+    transition: .2s ease;
+}
+.submit:hover {
+    background-color: white;
+    color: rgb(30,30,30);
+}
+[class^='error'] {
+    background-color: rgb(200,0,0);
+    display: block;
+    width: 200px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(100,0,0);
+    min-height: 30px;
+    font-size: 12px;
+    font-weight: lighter;
+    font-family: 'Lato', sans-serif;
+}
+.error_pin {
+    transform: translateX(-50%);
+    margin-left: 50%;
+    margin-top: 30px;
+    width: 80%;
+}
+h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
