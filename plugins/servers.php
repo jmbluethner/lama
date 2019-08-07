@@ -277,12 +277,13 @@
       <h4 style="margin-top: 35px;">LAMA Gameserver Console</h4>
       <div class="serverconsole">
         <span>LGC :></span>
-        <form method="GET" action="../assets/php/rcon.php">
+        <form method="GET" action="../assets/php/rcon.php" target="lgc-return">
           <input type="text" name="servercommand"></input>
           <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
           <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
           <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
-        </form>
+        </form><br>
+        <iframe id="lgc-return" name="lgc-return"></iframe>
       </div>
       <form method="get" action="servers.php">
         <input type="hidden" name="ipToRemove" value="<?php print_r($serverip) ?>" />

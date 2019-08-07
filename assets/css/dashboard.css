@@ -1054,6 +1054,13 @@ select {
 .table_lastnarrow tr th:nth-last-of-type(), .table_lastnarrow tr td:nth-last-of-type() {
   width: auto;
 }
+#lgc-return {
+  display: block;
+  min-height: 40px;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
 #sForm {
   display: none;
 }
