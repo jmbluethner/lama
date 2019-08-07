@@ -826,6 +826,19 @@ select {
   padding: 0;
   margin: 0;
 }
+#lgc-return {
+  display: block;
+  min-height: 40px;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--secondary);
+  color: var(--textSecondary);
+  font-family: 'Consolas', monospace;
+  font-size: 15px;
+  line-height: 30px;
+}
 .description {
   width: 120px;
   font-family: 'Montserrat', sans-serif;
@@ -1053,13 +1066,6 @@ select {
 }
 .table_lastnarrow tr th:nth-last-of-type(), .table_lastnarrow tr td:nth-last-of-type() {
   width: auto;
-}
-#lgc-return {
-  display: block;
-  min-height: 40px;
-  height: auto;
-  width: 100%;
-  overflow: hidden;
 }
 #sForm {
   display: none;

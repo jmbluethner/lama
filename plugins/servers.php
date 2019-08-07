@@ -282,9 +282,9 @@
           <input type="hidden" name="serverip" value="<?php print_r($serverip) ?>"></input>
           <input type="hidden" name="serverrcon" value="<?php print_r($serverrcon) ?>"></input>
           <input type="hidden" name="serverport" value="<?php print_r($serverport) ?>"></input>
-        </form><br>
-        <iframe id="lgc-return" name="lgc-return"></iframe>
+        </form>
       </div>
+      <iframe id="lgc-return" name="lgc-return"></iframe>
       <form method="get" action="servers.php">
         <input type="hidden" name="ipToRemove" value="<?php print_r($serverip) ?>" />
         <button type="submit" name="removeServer" class="button_warning">Remove Server from Database</button>
