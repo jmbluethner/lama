@@ -68,10 +68,12 @@
     </script>
   </head>
   <body>
-    <div class="sbox_container" id="sCont">
-      <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe>
-    </div>
-    <!-- ?php include "./plugins/.shoutbox.php" ? -->
+    <!-- Hide Shoutbox if not declared in config -->
+    <?php if($config['shoutbox']) { ?>
+      <div class="sbox_container" id="sCont">
+        <iframe src="./plugins/.shoutbox.php" class="frame_sbox"></iframe>
+      </div>
+    <?php } ?>
     <?php include './assets/php/sessioncheck.php'; ?>
     <script>
       $(document).ready(function() {

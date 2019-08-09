@@ -124,14 +124,15 @@ config.php has to look like that:
 ```php
 <?php
   return [
-    'SQLhost' => '',
-    'SQLdbname' => '',
-    'SQLuser' => '',
-    'SQLpass' => '',
-    'timezone' => 'Europe/Berlin',
-    'errorReporting' => 0,
-    'imageDB' => 'https://cdn.nighttimedev.com/images/lama/maps/',
-    'serverping' => 0
+    'SQLhost' => '', // The Address / IP to the SQL Server
+    'SQLdbname' => '', // The Name of the database
+    'SQLuser' => '', // The username for your databse
+    'SQLpass' => '', // Password connected to the user defined above
+    'timezone' => 'Europe/Berlin', // Timezone is needed for correct timestamps (for example in the log)
+    'errorReporting' => 0, // Do you want to see error notices inside of lama, or do you want to hide them?
+    'imageDB' => 'https://cdn.nighttimedev.com/images/lama/maps/', // The Database for Map images in /plugins/servers. I recommend to use it like in this example
+    'serverping' => 0, // Do you want /plugins/servers to try to ping Servers before they get added to the database? I recommend to leave this on false, since a lot of servers have pinging disabled because of DOS attacks. If you use lama for local servers, you can set it to true, so you get a message if you made provided a wrong / invalid IP.
+    'shoutbox' => 0 // Toggles the Shoutbox on or off
   ];
 ?>
 ```
